@@ -1,0 +1,59 @@
+{
+    "requirements": [{
+      "description": "Deve haver um `input` com o `id=\"carta-texto\"` onde o usuário poderá digitar o conteúdo da carta",
+      "bonus": false
+    }, {
+      "description": "Deve haver um parágrafo com o `id=\"carta-gerada\"` onde o usuário verá o resultado de sua carta misteriosa",
+      "bonus": false
+    }, {
+      "description": "Deve haver um botão com `id=\"criar-carta\"` e ao clicar nesse botão, a carta misteriosa deve ser gerada",
+      "bonus": false
+    },{
+      "description": "Ao criar uma carta através do botão `id=\"criar-carta\"`, o `input` com `id=\"carta-texto\"` deve permanecer com o texto digitado",
+      "bonus": false
+    },{
+      "description": "Se o usuário não preencher o campo ou preencher com apenas espaços vazios adicionar a mensagem 'Por favor, digite o conteúdo da carta.'",
+      "bonus": false
+    },{
+      "description": "Crie a classe `newspaper`",
+      "bonus": false
+    },{
+      "description": "Crie a classe `magazine1`",
+      "bonus": false
+    },{
+      "description": "Crie a classe `magazine2`",
+      "bonus": false
+    },{
+      "description": "Crie a classe `medium`",
+      "bonus": false
+    },{
+      "description": "Crie a classe `big`",
+      "bonus": false
+    },{
+      "description": "Crie a classe `reallybig`",
+      "bonus": false
+    },{
+      "description": "Crie a classe `rotateleft`",
+      "bonus": false
+    },{
+      "description": "Crie a classe `rotateright`",
+      "bonus": false
+    },{
+      "description": "Crie a classe `skewleft`",
+      "bonus": false      
+    },{
+      "description": "Crie a classe `skewright`",
+      "bonus": false
+    },{
+      "description": "Adicione as classes de forma aleatória a fim de estilizar as palavras.",
+      "bonus": false
+    },{
+      "description": "Com uma carta misteriosa gerada, adicione a possibilidade de alterar o estilo de uma palavra específica ao clicar nela",
+      "bonus": true
+    },{
+      "description": "Deve haver um parágrafo com o `id=\"carta-contador\"` onde existirá um contador de palavras",
+      "bonus": true
+    }]
+}
+
+

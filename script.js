@@ -32,6 +32,7 @@ function generateletter() {
       span.innerHTML = 'Por favor, digite o conteúdo da carta.';
       letter.appendChild(span);
     } else {
+      letter.innerHTML = '';
       const text = inputText.value;
       const textSplit = text.split(' ');
       for (let index = 0; index < textSplit.length; index += 1) {
@@ -42,7 +43,7 @@ function generateletter() {
       }
       words.innerHTML = '';
       const countWord = letter.childElementCount;
-      words.innerHTML = countWord;
+      words.innerHTML = `${countWord}`;
       contador.appendChild(words);
     }
   });

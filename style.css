@@ -1,6 +1,6 @@
 .newspaper {
   background-color: antiquewhite;
-  font-family: "Times New Roman", Times, serif;
+  font-family: 'Times New Roman', Times, serif;
   font-weight: bold;
 }
 
@@ -13,7 +13,7 @@
 }
 
 .magazine2 {
-  background-image: url(images/pink-pattern.png);
+  background-image: url("images/pink-pattern.png");
   color: fuchsia;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 900;
@@ -48,4 +48,8 @@
 
 .skewright {
   transform: skewX(-10deg);
+}
+
+span {
+  margin: 10px;
 }

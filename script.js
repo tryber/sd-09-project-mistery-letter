@@ -21,6 +21,9 @@ function ramdonClass() {
   const class2 = chave2[Math.floor(Math.random() * chave2.length)];
   return `${class1} ${class2}`;
 }
+const words = document.createElement('span');
+words.innerHTML = '';
+contador.appendChild(words);
 
 function generateletter() {
   buttonLetter.addEventListener('click', function () {
@@ -31,17 +34,16 @@ function generateletter() {
     } else {
       const text = inputText.value;
       const textSplit = text.split(' ');
-      const countWord = textSplit.length;
-      const words = document.createElement('span');
-      words.innerHTML = `${countWord}`;
-      contador.appendChild(words);
       for (let index = 0; index < textSplit.length; index += 1) {
         const span = document.createElement('span');
         span.innerHTML = textSplit[index];
         span.className = ramdonClass();
         letter.appendChild(span);
       }
-
+      words.innerHTML = '';
+      const countWord = letter.childElementCount;
+      words.innerHTML = countWord;
+      contador.appendChild(words);
     }
   });
 }

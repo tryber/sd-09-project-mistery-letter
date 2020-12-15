@@ -52,3 +52,11 @@ span {
 .skewright {
   transform: skewX(-10deg);
 }
+
+.class-contador {
+  display: inline-block;
+}
+
+label {
+  display: inline;
+}

@@ -1,6 +1,7 @@
 const inputText = document.getElementById('carta-texto');
 const buttonLetter = document.getElementById('criar-carta');
 const letter = document.getElementById('carta-gerada');
+const contador = document.getElementById('carta-contador');
 const optionClass = {
   key1: ['newspaper', 'magazine1', 'magazine2'],
   key2: ['medium', 'big', 'reallybig'],
@@ -18,7 +19,6 @@ function ramdonClass() {
   }
   const chave2 = optionClass[`key${secondNumber}`];
   const class2 = chave2[Math.floor(Math.random() * chave2.length)];
-
   return `${class1} ${class2}`;
 }
 
@@ -31,12 +31,17 @@ function generateletter() {
     } else {
       const text = inputText.value;
       const textSplit = text.split(' ');
+      const countWord = textSplit.length;
+      const words = document.createElement('span');
+      words.innerHTML = `Numero de palavras: ${countWord}`;
+      contador.appendChild(words);
       for (let index = 0; index < textSplit.length; index += 1) {
         const span = document.createElement('span');
         span.innerHTML = textSplit[index];
         span.className = ramdonClass();
         letter.appendChild(span);
       }
+
     }
   });
 }

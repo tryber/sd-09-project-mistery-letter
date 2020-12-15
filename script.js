@@ -40,10 +40,10 @@ randomClass();
 
 function changeClass() {
   cartaGerada.addEventListener('click', function (event) {
-      event.target.classList.toggle(style[Math.floor(Math.random() * 3)]);
-      event.target.classList.toggle(size[Math.floor(Math.random() * 3)]);
-      event.target.classList.toggle(rotation[Math.floor(Math.random() * 2)]);
-      event.target.classList.toggle(inclination[Math.floor(Math.random() * 2)]);
+    event.target.classList.toggle(style[Math.floor(Math.random() * 3)]);
+    event.target.classList.toggle(size[Math.floor(Math.random() * 3)]);
+    event.target.classList.toggle(rotation[Math.floor(Math.random() * 2)]);
+    event.target.classList.toggle(inclination[Math.floor(Math.random() * 2)]);
   });
 }
 changeClass();
@@ -51,7 +51,7 @@ changeClass();
 function countWord() {
   criarCartaBt.addEventListener('click', function () {
     const wordCount = cartaGerada.childElementCount;
-    cartaContador.innerText = `A carta possuí ${wordCount} palavras.`
+    cartaContador.innerText = `${wordCount}`;
   });
 }
 countWord();

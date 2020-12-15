@@ -33,7 +33,7 @@ function generateletter() {
       const textSplit = text.split(' ');
       const countWord = textSplit.length;
       const words = document.createElement('span');
-      words.innerHTML = `Numero de palavras: ${countWord}`;
+      words.innerHTML = `${countWord}`;
       contador.appendChild(words);
       for (let index = 0; index < textSplit.length; index += 1) {
         const span = document.createElement('span');

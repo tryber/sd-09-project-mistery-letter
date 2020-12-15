@@ -4,6 +4,7 @@ const cartaTexto = document.querySelector('#carta-texto');
 
 function createLetter() {
   criarCartaBt.addEventListener('click', function () {
+    cartaGerada.innerHTML = '';
     let word = cartaTexto.value.split(' ');
     for (let index = 0; index < word.length; index += 1) {
       const words = document.createElement('span');

@@ -1,6 +1,7 @@
 const criarCartaBt = document.querySelector('#criar-carta');
 const cartaGerada = document.querySelector('#carta-gerada');
 const cartaTexto = document.querySelector('#carta-texto');
+const cartaContador = document.querySelector('#carta-contador');
 
 function createLetter() {
   criarCartaBt.addEventListener('click', function () {
@@ -19,19 +20,38 @@ function createLetter() {
 }
 createLetter();
 
-function randomClass () {
+const style = ['newspaper', 'magazine1', 'magazine2'];
+const size = ['medium', 'big', 'reallybig'];
+const rotation = ['rotateleft', 'rotateright'];
+const inclination = ['skewleft', 'skewright'];
+
+function randomClass() {
   const words = document.getElementsByTagName('span');
-  const style = ['newspaper', 'magazine1', 'magazine2'];
-  const size = ['medium', 'big', 'reallybig'];
-  const rotation = ['rotateleft', 'rotateright'];
-  const inclination = ['skewleft', 'skewright'];
   criarCartaBt.addEventListener('click', function () {
     for (let index = 0; index < words.length; index += 1) {
       words[index].classList.add(style[Math.floor(Math.random() * 3)]);
       words[index].classList.add(size[Math.floor(Math.random() * 3)]);
       words[index].classList.add(rotation[Math.floor(Math.random() * 2)]);
       words[index].classList.add(inclination[Math.floor(Math.random() * 2)]);
-      }
+    }
   });
 }
 randomClass();
+
+function changeClass() {
+  cartaGerada.addEventListener('click', function (event) {
+      event.target.classList.toggle(style[Math.floor(Math.random() * 3)]);
+      event.target.classList.toggle(size[Math.floor(Math.random() * 3)]);
+      event.target.classList.toggle(rotation[Math.floor(Math.random() * 2)]);
+      event.target.classList.toggle(inclination[Math.floor(Math.random() * 2)]);
+  });
+}
+changeClass();
+
+function countWord() {
+  criarCartaBt.addEventListener('click', function () {
+    const wordCount = cartaGerada.childElementCount;
+    cartaContador.innerText = `A carta possuí ${wordCount} palavras.`
+  });
+}
+countWord();

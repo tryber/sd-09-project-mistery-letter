@@ -5,9 +5,9 @@ const cartaTexto = document.querySelector('#carta-texto');
 function createLetter() {
   criarCartaBt.addEventListener('click', function () {
     cartaGerada.innerHTML = '';
-    let word = cartaTexto.value.split(' ');
+    const word = cartaTexto.value.split(' ');
     if (cartaTexto.value === '' || word[1] === '') {
-      cartaGerada.innerText = 'Por favor, digite o conteúdo da carta.'
+      cartaGerada.innerText = 'Por favor, digite o conteúdo da carta.';
     } else {
       for (let index = 0; index < word.length; index += 1) {
         const words = document.createElement('span');

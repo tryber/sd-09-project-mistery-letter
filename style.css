@@ -3,6 +3,10 @@ body {
   width: 1366px;
 }
 
+p {
+  margin-top: 40px;
+}
+
 .newspaper {
   background-color: antiquewhite;
   font-family: Times New Roman, Times, serif;

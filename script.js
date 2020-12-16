@@ -1,3 +1,56 @@
+/* Requisito 16
+- adicionar classes na tag span de forma aleatoria
+- adicionar mais de uma classe em uma palavra
+- nao adicionar mais de uma classe do mesmo grupo na mesma palavra
+- grupos (estilo, tamanho, rotacao, inclinacao)
+
+- OBS.: uma classe de cada grupo está sendo sorteada e atribuída.
+  Em breve, será atribuída uma nova forma de sortear classes, onde não necessariamente
+  todas as palavras terão a mesma quantidade de classes
+*/
+
+function drawTwoNumbers() {
+  const indexRotationInclination = Math.floor(Math.random() * 2);
+  return indexRotationInclination;
+}
+
+function drawThreeNumbers() {
+  const indexStyleSize = Math.floor(Math.random() * 3);
+  return indexStyleSize;
+}
+
+function randomClassName() {
+  const style = 
+  [
+    'newspaper', 
+    'magazine1', 
+    'magazine2',
+  ]
+
+  const size = 
+  [
+    'medium',
+    'big',
+    'reallybig',
+  ]
+
+  const rotation = 
+  [
+    'rotateleft',
+    'rotateright',
+  ]
+
+  const inclination = 
+  [
+    'skewleft',
+    'skewright',
+  ]
+
+  const newClassName = `${style[drawThreeNumbers()]} ${size[drawThreeNumbers()]} ${rotation[drawTwoNumbers()]} ${inclination[drawTwoNumbers()]}`;
+
+  return newClassName;
+}
+
 /* Requisito 3, 4 & 5 (respectivamente)
 - apertar no botao para gerar a carta
 - cada palavra deve ser colocada em uma tag span
@@ -31,6 +84,7 @@ function addSpanToParagraph() {
     const wordsList = document.querySelector('input').value.split(' ');
     wordsList.forEach((word) => {
       const newSpan = createSpan(word);
+      newSpan.className = randomClassName();
       if (newSpan.innerText.trim() !== '') {
         return myParagraph.appendChild(newSpan);
       }

@@ -57,14 +57,9 @@ function randomClassName() {
 */
 
 function generateWordsCounter() {
-  if (document.querySelector('#carta-contador')) {
-    document.querySelector('#carta-gerador').remove();
-  }
-  const paragraphCounter = document.createElement('p');
-  paragraphCounter.id = 'carta-contador';
   const counter = document.querySelector('#carta-gerada').childElementCount;
-  paragraphCounter.innerText = `Foi gerada uma carta misteriosa de ${counter} palavras.`;
-  document.body.insertBefore(paragraphCounter, document.body.childNodes[6]);
+  const paragraphCounter = document.querySelector('#carta-contador');
+  paragraphCounter.innerText = `${counter}`;
 }
 
 /* Requisito 3, 4 & 5 (respectivamente)
@@ -108,6 +103,7 @@ function addSpanToParagraph() {
       return myParagraph;
     });
     generateWordsCounter();
+    return myParagraph;
   });
 }
 

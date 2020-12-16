@@ -13,12 +13,14 @@ function createSpan(text) {
 
 function addSpanToParagraph() {
   const generateButton = document.querySelector('button');
-  const myParagraph = document.querySelector('p');
+  const myParagraph = document.querySelector('#carta-gerada');
   generateButton.addEventListener('click', () => {
     const wordsList = document.querySelector('input').value.split(' ');
     wordsList.forEach((word) => {
       const newSpan = createSpan(word);
-      myParagraph.appendChild(newSpan);
+      if (newSpan.innerText.trim() !== '') {
+        myParagraph.appendChild(newSpan);
+      }
     });
   });
 }

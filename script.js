@@ -20,7 +20,7 @@ function addSpanToParagraph() {
       const newSpan = createSpan(word);
       myParagraph.appendChild(newSpan);
     });
-  })
+  });
 }
 
 addSpanToParagraph();

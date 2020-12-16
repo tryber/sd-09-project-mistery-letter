@@ -25,7 +25,7 @@ function addSpanToParagraph() {
     }
     while (myParagraph.childNodes.length > 0) {
       myParagraph.childNodes.forEach((node) => {
-        myParagraph.removeChild(node);
+        return myParagraph.removeChild(node);
       });
     }
     const wordsList = document.querySelector('input').value.split(' ');

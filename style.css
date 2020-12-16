@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+}
+
+h1 {
+  font-family: Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 3em;
+  margin: auto;
+  padding-top: 20px;
+}
+
+header {
+  background-color: grey;
+  height: 100px;
+  text-align: center;
+  top: 0;
+  width: 100%;
+}
+
+.carta-gerada {
+  max-width: 90%;
+  text-align: center;
+}
+
+footer {
+  border: 1px solid black;
+  bottom: 0;
+  font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+  font-size: 11px;
+  margin: 0;
+  padding: 5px;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+}
+
+.data-input {
+  margin-top: 20px;
+  text-align: center;
+}

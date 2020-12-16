@@ -54,7 +54,7 @@ footer {
 }
 
 .magazine2 {
-  background-image: url ('images/pink-pattern.png');
+  background-image: ('images/pink-pattern.png');
   color: fuchsia;
   font-family: Verdana, serif;
   font-weight: 900;

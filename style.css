@@ -41,22 +41,22 @@ footer {
 
 .newspaper {
   background-color: antiquewhite;
-  font-family: 'Times New Roman', serif;;
+  font-family: Times New Roman, serif;
   font-weight: bold;
 }
 
 .magazine1 {
   background-color: teal;
   color: white;
-  font-family: Verdana, serif;;
+  font-family: Verdana, serif;
   font-weight: 900;
   text-transform: uppercase;
 }
 
 .magazine2 {
-  background-image: "images/pink-pattern.png";
+  background-image: url ('images/pink-pattern.png');
   color: fuchsia;
-  font-family: Verdana, serif;;
+  font-family: Verdana, serif;
   font-weight: 900;
 }
 
@@ -84,9 +84,9 @@ footer {
 }
 
 .skewleft {
-  transform: matrix(1, 0, 0.176327, 1, 0, 0);
+  transform: matrix(1 , 0 , 0.176327 , 1 , 0 , 0);
 }
 
 .skewright {
-  transform: matrix(1, 0, -0.176327, 1, 0, 0);
+  transform: matrix(1 , 0 , -0.176327 , 1 , 0 , 0);
 }

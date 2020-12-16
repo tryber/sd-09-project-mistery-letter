@@ -1,8 +1,12 @@
-/* Requisito 5 - Se o usuário não preencher o campo ou preencher com apenas espaços vazios adicionar a mensagem 'Por favor, digite o conteúdo da carta. */
+/* Requisito 5 - Se o usuário não preencher o campo ou preencher com
+apenas espaços vazios adicionar a mensagem:
+'Por favor, digite o conteúdo da carta.
+*/
 
 function verifyInput() {
   if (document.querySelector('input').value.trim() === '') {
-    return alert('Por favor, digite o conteúdo da carta.')
+    alert('Por favor, digite o conteúdo da carta.');
+    return;
   }
 }
 

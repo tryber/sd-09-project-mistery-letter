@@ -3,11 +3,17 @@ const textInput = document.getElementById('carta-texto');
 const textResult = document.getElementById('carta-gerada');
 
 function addText() {
-  const word = textInput.value.split(' ');
-  for (let index in word) {
+  if (textInput.value) {
+    const word = textInput.value.split(' ');
+    for (let index in word) {
+      const newWord = document.createElement('span');
+      // newWord.className = 'teste';
+      newWord.innerText += word[index];
+      textResult.appendChild(newWord);
+    }
+  } else {
     const newWord = document.createElement('span');
-    newWord.className = 'teste';
-    newWord.innerText += `${word[index]}`;
+    newWord.innerText = 'por favor, digite o conteúdo da carta.';
     textResult.appendChild(newWord);
   }
 }

@@ -20,31 +20,31 @@ function drawThreeNumbers() {
 }
 
 function randomClassName() {
-  const style = 
-  [
-    'newspaper', 
-    'magazine1', 
-    'magazine2',
-  ]
+  const style =
+    [
+      'newspaper',
+      'magazine1',
+      'magazine2',
+    ];
 
-  const size = 
-  [
-    'medium',
-    'big',
-    'reallybig',
-  ]
+  const size =
+    [
+      'medium',
+      'big',
+      'reallybig',
+    ];
 
-  const rotation = 
-  [
-    'rotateleft',
-    'rotateright',
-  ]
+  const rotation =
+    [
+      'rotateleft',
+      'rotateright',
+    ];
 
-  const inclination = 
-  [
-    'skewleft',
-    'skewright',
-  ]
+  const inclination =
+    [
+      'skewleft',
+      'skewright',
+    ];
 
   const newClassName = `${style[drawThreeNumbers()]} ${size[drawThreeNumbers()]} ${rotation[drawTwoNumbers()]} ${inclination[drawTwoNumbers()]}`;
 
@@ -78,7 +78,8 @@ function addSpanToParagraph() {
     }
     while (myParagraph.childNodes.length > 0) {
       myParagraph.childNodes.forEach((node) => {
-        return myParagraph.removeChild(node);
+        myParagraph.removeChild(node);
+        return myParagraph;
       });
     }
     const wordsList = document.querySelector('input').value.split(' ');
@@ -86,10 +87,11 @@ function addSpanToParagraph() {
       const newSpan = createSpan(word);
       newSpan.className = randomClassName();
       if (newSpan.innerText.trim() !== '') {
-        return myParagraph.appendChild(newSpan);
+        myParagraph.appendChild(newSpan);
       }
     });
   });
+  return myParagraph;
 }
 
 addSpanToParagraph();

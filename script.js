@@ -3,7 +3,7 @@ const textInput = document.getElementById('carta-texto');
 const textResult = document.getElementById('carta-gerada');
 
 function addText() {
-  if (textInput.value) {
+  if (textInput.value || textInput.value !== ' ') {
     const word = textInput.value.split(' ');
     for (let index in word) {
       const newWord = document.createElement('span');

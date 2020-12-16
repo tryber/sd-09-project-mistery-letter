@@ -21,7 +21,7 @@ function addSpanToParagraph() {
   const myParagraph = document.querySelector('#carta-gerada');
   generateButton.addEventListener('click', () => {
     if (document.querySelector('#carta-texto').value.trim() === '') {
-      return (myParagraph.innerText = 'Por favor, digite o conteúdo da carta.')
+      return (myParagraph.innerText = 'Por favor, digite o conteúdo da carta.');
     }
     while (myParagraph.childNodes.length > 0) {
       myParagraph.childNodes.forEach((node) => {
@@ -32,7 +32,7 @@ function addSpanToParagraph() {
     wordsList.forEach((word) => {
       const newSpan = createSpan(word);
       if (newSpan.innerText.trim() !== '') {
-        myParagraph.appendChild(newSpan);
+        return myParagraph.appendChild(newSpan);
       }
     });
   });

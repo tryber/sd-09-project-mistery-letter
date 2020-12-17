@@ -33,7 +33,7 @@ function problemVerifyAndCounter(word) {
     problem = conditionProblem(index, word);
     number += 1;
   }
-  counter.innerText = `O texto possui ${number} palavra(s)! <3`;
+  counter.innerText = number;
   return problem;
 }
 

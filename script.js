@@ -14,15 +14,21 @@ function aleatoryClass() {
   return classResult;
 }
 
+function conditionProblem(index, word) {
+  let problem = true;
+  if (word[index] !== '') {
+    problem = false;
+  }
+  if (word[index] !== ' ' && typeof word === 'string') {
+    problem = false;
+  }
+  return problem;
+}
+
 function problemVerify(word) {
   let problem = true;
   for (let index = 0; index < word.length; index += 1) {
-    if (word[index] !== '') {
-      problem = false;
-    }
-    if (word[index] !== ' ' && typeof word === 'string') {
-      problem = false;
-    }
+    problem = conditionProblem(index, word);
   }
   return problem;
 }

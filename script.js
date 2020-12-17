@@ -17,8 +17,20 @@ function aleatoryClass() {
 }
 
 function addText() {
-  if (textInput.value || textInput.value !== ' ') {
-    const word = textInput.value.split(' ');
+  const word = textInput.value.split(' ');
+  let problem = true;
+  console.log(typeof word);
+  console.log(word[0]);
+  for (let index in word) {
+    if (word[index] !== '') {
+      problem = false;
+    }
+    if (word[index] !== ' ' && typeof word === String) {
+      problem = false;
+    }
+  }
+  if (problem === false) {
+    textResult.innerHTML = '';
     for (let index in word) {
       const newWord = document.createElement('span');
       newWord.className = aleatoryClass();
@@ -26,9 +38,7 @@ function addText() {
       textResult.appendChild(newWord);
     }
   } else {
-    const newWord = document.createElement('span');
-    newWord.innerText = 'por favor, digite o conteúdo da carta.';
-    textResult.appendChild(newWord);
+      textResult.innerHTML = 'por favor, digite o conteúdo da carta.';
   }
 }
 

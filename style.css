@@ -88,9 +88,9 @@ footer {
 }
 
 .skewleft {
-  transform: matrix(1 , 0 , 0.176 , 1 , 0 , 0);
+  transform: skewX(10deg);
 }
 
 .skewright {
-  transform: matrix(1 , 0 , -0.176 , 1 , 0 , 0);
+  transform: skewX(-10deg);
 }

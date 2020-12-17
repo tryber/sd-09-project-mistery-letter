@@ -1,6 +1,7 @@
 const buttonCreateText = document.getElementById('criar-carta');
 const textInput = document.getElementById('carta-texto');
 const textResult = document.getElementById('carta-gerada');
+const counter = document.getElementById('carta-contador');
 
 function aleatoryClass() {
   const classList = ['newspaper', 'magazine1', 'magazine2', 'medium', 'big', 'reallybig', 'rotateleft', 'rotateright', 'skewleft', 'skewright'];
@@ -25,18 +26,21 @@ function conditionProblem(index, word) {
   return problem;
 }
 
-function problemVerify(word) {
+function problemVerifyAndCounter(word) {
+  let number = 0;
   let problem = true;
   for (let index = 0; index < word.length; index += 1) {
     problem = conditionProblem(index, word);
+    number += 1;
   }
+  counter.innerText = `O texto possui ${number} palavra(s)! <3`;
   return problem;
 }
 
 function addText() {
   const word = textInput.value.split(' ');
   let problem = true;
-  problem = problemVerify(word);
+  problem = problemVerifyAndCounter(word);
   if (problem === false) {
     textResult.innerHTML = '';
     for (let index = 0; index < word.length; index += 1) {

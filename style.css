@@ -9,9 +9,9 @@ h1 {
   padding-top: 20px;
 }
 
-/* span {
+span {
   margin-left: 5px;
-} */
+}
 
 header {
   background-color: grey;
@@ -40,6 +40,11 @@ footer {
 
 .data-input {
   margin-top: 20px;
+  text-align: center;
+}
+
+.carta-contador {
+  font-family: Ubuntu, Cantarell, sans-serif;
   text-align: center;
 }
 

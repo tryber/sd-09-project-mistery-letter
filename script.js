@@ -85,7 +85,7 @@ function importText(inputText) {
 
 function createLetter() {
   const inputText = document.querySelector('#carta-texto');
-  if (!inputText.value) {
+  if (inputText.value.trim() === '') {
     importText('Por favor, digite o conteúdo da carta.');
   } else {
     importText(inputText.value);

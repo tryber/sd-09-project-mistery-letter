@@ -4,7 +4,7 @@ function createEvent() {
   createBtn.addEventListener('click', function () {
     const inputText = document.querySelector('#carta-texto');
     if (!inputText.value) {
-      alert('Por favor, digite o conteúdo da carta.');
+      inputText.value = 'Por favor, digite o conteúdo da carta';
     } else {
       const printedLetter = document.querySelector('#carta-gerada');
       const arrayText = inputText.value.split(' ');

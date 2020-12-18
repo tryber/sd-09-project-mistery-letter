@@ -1,14 +1,14 @@
 /* Class styles */
 .newspaper {
   background-color: antiquewhite;
-  font-family: Times New Roman, Times, serif;
-  font-weight: bold;
+  font-family: Times New Roman, serif;
+  font-weight: 700;
 }
 
 .magazine1 {
   background-color: teal;
   color: white;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Verdana, serif;
   font-weight: 900;
   text-transform: uppercase;
 }
@@ -16,7 +16,7 @@
 .magazine2 {
   background-image: url('images/pink-pattern.png');
   color: fuchsia;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Verdana, serif;
   font-weight: 900;
 }
 
@@ -30,7 +30,7 @@
   padding: 10px;
 }
 
-.really-big {
+.reallybig {
   font-size: 40px;
   padding: 15px;
 }

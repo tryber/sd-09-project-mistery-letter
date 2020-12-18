@@ -12,9 +12,9 @@ function shuffle(array) {
 // Aplicação de estilos aleatórios
 function randomClassTypes(object) {
   let randomAmountOfStylesMinus1 = Math.floor(Math.random() * Object.keys(object).length);
-  let array = []
+  const array = [];
   while (randomAmountOfStylesMinus1 >= 0) {
-    classTypeIndex = Math.floor(Math.random() * Object.keys(object).length);
+    let classTypeIndex = Math.floor(Math.random() * Object.keys(object).length);
     // Filtro para itens repetidos no array
     while (array.includes(classTypeIndex)) {
       classTypeIndex = Math.floor(Math.random() * Object.keys(object).length);
@@ -50,6 +50,12 @@ function createRandomStyle() {
   }
 }
 
+// Contador de palavras
+function wordCount() {
+  const spanCount = document.querySelectorAll('span');
+  const letterInfoParagrah = document.querySelector('#carta-contador');
+  letterInfoParagrah.innerText = `Total de palavras: ${spanCount.length}`;
+}
 
 // Cria texto da carta
 function insertText(inputText, printedLetter) {
@@ -60,6 +66,7 @@ function insertText(inputText, printedLetter) {
     printedLetter.appendChild(newSpan);
   }
   createRandomStyle();
+  wordCount();
 }
 
 function removeText(printedLetter) {

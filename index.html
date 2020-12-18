@@ -8,9 +8,21 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <input type="text" id="carta-texto" placeholder="Digite aqui sua carta">
-  <button id="criar-carta">Criar</button>
-  <p id="carta-gerada"></p>
+  <header>
+    <h1 class="main-title">Carta misteriosa anônima</h1>
+  </header>
+  <section class="input-content">
+    <input type="text" id="carta-texto" placeholder="Digite aqui sua carta">
+    <button id="criar-carta">Anonimizar</button>
+  </section>
+  <section class="letter-info">
+    <p id="carta-contador">
+      <!-- Texto inserido via script -->
+    </p>
+  </section>
+  <section class="letter-content">
+    <p id="carta-gerada"></p>
+  </section>
   <script src="script.js"></script>
 </body>
 </html>

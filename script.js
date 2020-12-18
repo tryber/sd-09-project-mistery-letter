@@ -54,7 +54,7 @@ function createRandomStyle() {
 function wordCount() {
   const spanCount = document.querySelectorAll('span');
   const letterInfoParagrah = document.querySelector('#carta-contador');
-  letterInfoParagrah.innerText = `Total de palavras: ${spanCount.length}`;
+  letterInfoParagrah.innerText = spanCount.length;
 }
 
 // Cria texto da carta
@@ -86,7 +86,7 @@ function importText(inputText) {
 function createLetter() {
   const inputText = document.querySelector('#carta-texto');
   if (!inputText.value) {
-    importText('Por favor, digite o conteúdo da carta');
+    importText('Por favor, digite o conteúdo da carta.');
   } else {
     importText(inputText.value);
   }

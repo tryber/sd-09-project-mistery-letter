@@ -1,3 +1,56 @@
+// Embaralhar arrays
+function shuffle(array) {
+  for (let index = array.length - 1; index > 0; index -= 1) {
+    const randomIndex = Math.floor(Math.random() * (index + 1));
+    const temp = array[index];
+    array[index] = array[randomIndex];
+    array[randomIndex] = temp;
+  }
+  return array;
+}
+
+// Aplicação de estilos aleatórios
+function randomClassTypes(object) {
+  let randomAmountOfStylesMinus1 = Math.floor(Math.random() * Object.keys(object).length);
+  let array = []
+  while (randomAmountOfStylesMinus1 >= 0) {
+    classTypeIndex = Math.floor(Math.random() * Object.keys(object).length);
+    // Filtro para itens repetidos no array
+    while (array.includes(classTypeIndex)) {
+      classTypeIndex = Math.floor(Math.random() * Object.keys(object).length);
+    }
+    array.push(classTypeIndex);
+    randomAmountOfStylesMinus1 -= 1;
+  }
+  return array;
+}
+
+function addStyle(styleTypesArray, stylesObject, element) {
+  for (let index = 0; index < styleTypesArray.length; index += 1) {
+    const styleTypeIndex = styleTypesArray[index];
+    const styleType = Object.values(stylesObject)[styleTypeIndex];
+    const selectedClassType = shuffle(styleType)[0];
+    element.classList.add(selectedClassType);
+  }
+}
+
+function createRandomStyle() {
+  // Seletores disponíveis separados em categorias
+  const stylesObject = {
+    style: ['newspaper', 'magazine1', 'magazine2'],
+    size: ['medium', 'big', 'reallybig'],
+    rotation: ['rotateleft', 'rotateright'],
+    skew: ['skewleft', 'skewright'],
+  };
+  // Recuperação dos spans onde os estilos serão aplicados
+  const span = document.querySelectorAll('span');
+  for (let spanIndex = 0; spanIndex < span.length; spanIndex += 1) {
+    const word = span[spanIndex];
+    addStyle(randomClassTypes(stylesObject), stylesObject, word);
+  }
+}
+
+
 // Cria texto da carta
 function insertText(inputText, printedLetter) {
   const arrayText = inputText.split(' ');
@@ -6,11 +59,12 @@ function insertText(inputText, printedLetter) {
     newSpan.innerText = arrayText[index];
     printedLetter.appendChild(newSpan);
   }
+  createRandomStyle();
 }
 
 function removeText(printedLetter) {
   while (printedLetter.innerHTML) {
-    printedLetter.removeChild(printedLetter.firstChild)
+    printedLetter.removeChild(printedLetter.firstChild);
   }
 }
 

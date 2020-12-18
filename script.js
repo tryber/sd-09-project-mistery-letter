@@ -59,14 +59,20 @@ function wordCount() {
 
 // Cria texto da carta
 function insertText(inputText, printedLetter) {
-  const arrayText = inputText.split(' ');
-  for (let index = 0; index < arrayText.length; index += 1) {
-    const newSpan = document.createElement('span');
-    newSpan.innerText = arrayText[index];
+  const newSpan = document.createElement('span');
+  if (inputText === 'Por favor, digite o conteúdo da carta.') {
+    newSpan.innerText = inputText;
     printedLetter.appendChild(newSpan);
+  } else {
+    const arrayText = inputText.split(' ');
+    for (let index = 0; index < arrayText.length; index += 1) {
+      const newSpan = document.createElement('span');
+      newSpan.innerText = arrayText[index];
+      printedLetter.appendChild(newSpan);
+    }
+    createRandomStyle();
+    wordCount();
   }
-  createRandomStyle();
-  wordCount();
 }
 
 function removeText(printedLetter) {

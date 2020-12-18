@@ -4,25 +4,36 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mistery Letter</title>
+  <!-- Icon links -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+  <!-- Font links -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
   <!-- CSS link -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1 class="main-title">Carta misteriosa anônima</h1>
-  </header>
-  <section class="input-content">
-    <input type="text" id="carta-texto" placeholder="Digite aqui sua carta">
-    <button id="criar-carta">Anonimizar</button>
-  </section>
-  <section class="letter-info">
-    <p id="carta-contador">
-      <!-- Texto inserido via script -->
-    </p>
-  </section>
-  <section class="letter-content">
-    <p id="carta-gerada"></p>
-  </section>
+  <main class="main-content">
+    <header>
+      <h1 class="main-title">Carta misteriosa anônima</h1>
+    </header>
+    <section class="input-content">
+      <input type="text" id="carta-texto" class="inputbox-style" placeholder="Digite aqui sua carta">
+      <button id="criar-carta">Anonimizar</button>
+    </section>
+    <section class="letter-info">
+      <p id="carta-contador">
+        <!-- Texto inserido via script -->
+      </p>
+    </section>
+    <section class="letter-content">
+      <p id="carta-gerada" class="letter-style"></p>
+    </section>
+  </main>
+  <footer>
+    <em class="fab fa-github"></em></button>
+    <em class="fab fa-linkedin"></em></button>
+  </footer>
   <script src="script.js"></script>
 </body>
 </html>

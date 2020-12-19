@@ -36,11 +36,54 @@ function destroySpanLetter() {
   cartaGerada.innerHTML = '';
 }
 
+function selectStyleClasse(word) {
+  const selectStyle = Math.ceil(Math.random() * 3);
+  if (selectStyle === 1) word.classList.toggle('newspaper');
+  if (selectStyle === 2) word.classList.toggle('magazine1');
+  if (selectStyle === 3) word.classList.toggle('magazine2');
+}
+
+function selectSizeClasse(word) {
+  const selectStyle = Math.ceil(Math.random() * 3);
+  if (selectStyle === 1) word.classList.toggle('medium');
+  if (selectStyle === 2) word.classList.toggle('big');
+  if (selectStyle === 3) word.classList.toggle('reallybig');
+}
+
+function selectRotateClasse(word) {
+  const selectStyle = Math.ceil(Math.random() * 2);
+  if (selectStyle === 1) word.classList.toggle('rotateleft');
+  if (selectStyle === 2) word.classList.toggle('rotateright');
+}
+
+function selectSkewClasse(word) {
+  const selectStyle = Math.ceil(Math.random() * 2);
+  if (selectStyle === 1) word.classList.toggle('skewleft');
+  if (selectStyle === 2) word.classList.toggle('skewright');
+}
+
+function addClassesToSpan(word) {
+  const selectTranform = Math.ceil(Math.random() * 2);
+  selectStyleClasse(word);
+  selectSizeClasse(word);
+  if (selectTranform === 1) selectRotateClasse(word);
+  if (selectTranform === 2) selectSkewClasse(word);
+}
+
+function addClassesToLetter() {
+  const letterWords = document.querySelectorAll('span');
+  console.log(letterWords);
+  for (let index = 0; index < letterWords.length; index += 1) {
+    addClassesToSpan(letterWords[index]);
+  }
+}
+
 function generateLetter() {
   destroySpanLetter();
   let letterText = getLetterTyped();
   letterText = trasnformLetterToArray(letterText);
   tranformArrayTextSpan(letterText);
+  addClassesToLetter();
 }
 
 function listeners() {

@@ -54,3 +54,12 @@ body {
 .skewright {
   transform: skew(-10deg);
 }
+
+span {
+  display: inline-block;
+  margin: 10px;
+}
+
+input {
+  width: 50%;
+}

@@ -1,12 +1,13 @@
 // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/trim
 function checkInputContent(letter) {
-  if (letter.value === '') alert('Por favor, digite o conteúdo da carta.');
-  else if (letter.length === 0 || !letter.value.trim()) alert('Por favor, digite o conteúdo da carta.');
+  const cartaGerada = document.querySelector('#carta-gerada');
+  if (!letter.value.trim()) cartaGerada.innerText = 'Por favor, digite o conteúdo da carta.';
+    return letter.value;
 }
 
 function getLetterTyped() {
   const cartaTextoInput = document.querySelector('#carta-texto');
-  checkInputContent(cartaTextoInput);
+  cartaTextoInput.value = checkInputContent(cartaTextoInput);
   return cartaTextoInput.value;
 }
 
@@ -28,16 +29,13 @@ function tranformArrayTextSpan(letterArray) {
 
 function destroySpanLetter() {
   const cartaGerada = document.querySelector('#carta-gerada');
-  const wordSpans = document.querySelectorAll('span');
-  for (const word of wordSpans) {
-    cartaGerada.removeChild(word);
-  }
+  cartaGerada.innerHTML = '';
 }
 
 function generateLetter() {
+  destroySpanLetter();
   let letterText = getLetterTyped();
   letterText = trasnformLetterToArray(letterText);
-  destroySpanLetter();
   tranformArrayTextSpan(letterText);
   // console.log(letterText);
 }

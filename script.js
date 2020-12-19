@@ -41,7 +41,7 @@ function createWords(letter) {
       wordSpan.addEventListener('click', clickRerollClasses);
       cartaGeradaParagraph.appendChild(wordSpan);
       addRandomClasses(wordSpan);
-      cartaContadorParagraph.innerText = `Sua carta misteriosa possui ${letter.length} palavras.`;
+      cartaContadorParagraph.innerText = letter.length;
     }
   }
 }

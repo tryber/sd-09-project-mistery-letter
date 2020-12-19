@@ -1,7 +1,7 @@
 .newspaper {
   background-color: antiquewhite;
-  font-family: 'Times New Roman', Times, serif;
-  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 700;
 }
 
 .magazine1 {
@@ -10,4 +10,8 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 900;
   text-transform: uppercase;
+}
+
+.magazine2 {
+
 }

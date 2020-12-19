@@ -39,7 +39,7 @@ function generateLetter() {
   letterText = trasnformLetterToArray(letterText);
   destroySpanLetter();
   tranformArrayTextSpan(letterText);
-  console.log(letterText);
+  // console.log(letterText);
 }
 
 function listeners() {

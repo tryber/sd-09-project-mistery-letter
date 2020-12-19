@@ -29,7 +29,7 @@ function tranformArrayTextSpan(letterArray) {
 function destroySpanLetter() {
   const cartaGerada = document.querySelector('#carta-gerada');
   const wordSpans = document.querySelectorAll('span');
-  for (word of wordSpans) {
+  for (const word of wordSpans) {
     cartaGerada.removeChild(word);
   }
 }
@@ -49,4 +49,4 @@ function listeners() {
 
 window.onload = function () {
   listeners();
-}
+};

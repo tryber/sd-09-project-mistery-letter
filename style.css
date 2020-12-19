@@ -5,7 +5,14 @@ body {
 
 .newspaper {
   background-color: antiquewhite;
-  font-family: 'Times New Roman', Times, serif;
-  font-weight: bold;  
+  font-family: 'Times New Roman';
+  font-weight: bold;
 }
 
+.magazine1 {
+  background-color: teal;
+  color: white;
+  font-family: 'Verdana';
+  font-weight: 900;
+  text-transform: uppercase;
+}

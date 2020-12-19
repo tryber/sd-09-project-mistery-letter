@@ -1,3 +1,11 @@
+// Seletores disponíveis separados em categorias
+const stylesObject = {
+  style: ['newspaper', 'magazine1', 'magazine2'],
+  size: ['medium', 'big', 'reallybig'],
+  rotation: ['rotateleft', 'rotateright'],
+  skew: ['skewleft', 'skewright'],
+};
+
 // Embaralhar arrays
 function shuffle(array) {
   for (let index = array.length - 1; index > 0; index -= 1) {
@@ -27,6 +35,9 @@ function randomClassTypes(object) {
 
 function addStyle(styleTypesArray, stylesObject, element) {
   for (let index = 0; index < styleTypesArray.length; index += 1) {
+    if (element.classList) {
+      element.className = '';
+    }
     const styleTypeIndex = styleTypesArray[index];
     const styleType = Object.values(stylesObject)[styleTypeIndex];
     const selectedClassType = shuffle(styleType)[0];
@@ -35,13 +46,6 @@ function addStyle(styleTypesArray, stylesObject, element) {
 }
 
 function createRandomStyle() {
-  // Seletores disponíveis separados em categorias
-  const stylesObject = {
-    style: ['newspaper', 'magazine1', 'magazine2'],
-    size: ['medium', 'big', 'reallybig'],
-    rotation: ['rotateleft', 'rotateright'],
-    skew: ['skewleft', 'skewright'],
-  };
   // Recuperação dos spans onde os estilos serão aplicados
   const span = document.querySelectorAll('span');
   for (let spanIndex = 0; spanIndex < span.length; spanIndex += 1) {
@@ -68,11 +72,14 @@ function insertText(inputText, printedLetter) {
     for (let index = 0; index < arrayText.length; index += 1) {
       const newSpan = document.createElement('span');
       newSpan.innerText = arrayText[index];
+      newSpan.addEventListener('click', () => {
+        addStyle(randomClassTypes(stylesObject), stylesObject, newSpan);
+      });
       printedLetter.appendChild(newSpan);
     }
     createRandomStyle();
-    wordCount();
   }
+  wordCount();
 }
 
 function removeText(printedLetter) {

@@ -1,6 +1,7 @@
 const criarCartaButton = document.getElementById('criar-carta');
 const cartaGeradaParagraph = document.getElementById('carta-gerada');
 const cartaTextoInput = document.getElementById('carta-texto');
+const cartaContadorParagraph = document.getElementById('carta-contador');
 
 const styleGroup = ['newspaper', 'magazine1', 'magazine2'];
 const sizeGroup = ['medium', 'big', 'reallybig'];
@@ -46,6 +47,7 @@ function createWords(letter) {
       wordSpan.style.display = 'inline-block';
       cartaGeradaParagraph.appendChild(wordSpan);
       addRandomClasses(wordSpan);
+      cartaContadorParagraph.innerText = `Sua carta misteriosa possui ${letter.length} palavras.`
     }
   }
 }
@@ -55,6 +57,7 @@ function createLetter() {
     const letter = cartaTextoInput.value.trim().split(' ');
     cartaGeradaParagraph.innerHTML = '';
     createWords(letter);
+
   } else {
     cartaGeradaParagraph.innerText = 'Por favor, digite o conteúdo da carta.';
   }

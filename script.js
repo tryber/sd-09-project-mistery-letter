@@ -1,7 +1,11 @@
 // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/trim
 function checkInputContent(letter) {
   const cartaGerada = document.querySelector('#carta-gerada');
-  if (!letter.value.trim()) cartaGerada.innerText = 'Por favor, digite o conteúdo da carta.';
+  const cartaTextoInput = document.querySelector('#carta-texto');
+  if (!letter.value.trim()) {
+    cartaGerada.innerText = 'Por favor, digite o conteúdo da carta.';
+    cartaTextoInput.value = '';
+  }
     return letter.value;
 }
 
@@ -37,7 +41,6 @@ function generateLetter() {
   let letterText = getLetterTyped();
   letterText = trasnformLetterToArray(letterText);
   tranformArrayTextSpan(letterText);
-  // console.log(letterText);
 }
 
 function listeners() {

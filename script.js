@@ -19,24 +19,18 @@ function addRandomClasses(wordSpan) {
   for (let index = 1; index < 4; index += 1) {
     rngStyles.push(rngNumber(2));
   }
+  wordSpan.className = '';
   for (let index = 0; index < rngStyles.length; index += 1) {
     if (rngStyles[index]) {
-      wordSpan.classList.add(styles[index][rngNumber(styles[index].length)]);
+      wordSpan.classList.toggle(styles[index][rngNumber(styles[index].length)]);
     }
   }
 }
 
 function clickRerollClasses(event) {
   const wordSpan = event.target;
-  const rngStyles = [];
-  for (let index = 0; index < 4; index += 1) {
-    rngStyles.push(rngNumber(2));
-  }
-  for (let index = 0; index < rngStyles.length; index += 1) {
-    if (rngStyles[index]) {
-      wordSpan.classList.add(styles[index][rngNumber(styles[index].length)]);
-    }
-  }
+  addRandomClasses(wordSpan);
+  console.log(wordSpan.className);
 }
 
 function createWords(letter) {
@@ -45,9 +39,10 @@ function createWords(letter) {
       const wordSpan = document.createElement('span');
       wordSpan.innerText = letter[index];
       wordSpan.style.display = 'inline-block';
+      wordSpan.addEventListener('click', clickRerollClasses);
       cartaGeradaParagraph.appendChild(wordSpan);
       addRandomClasses(wordSpan);
-      cartaContadorParagraph.innerText = `Sua carta misteriosa possui ${letter.length} palavras.`
+      cartaContadorParagraph.innerText = `Sua carta misteriosa possui ${letter.length} palavras.`;
     }
   }
 }
@@ -57,11 +52,9 @@ function createLetter() {
     const letter = cartaTextoInput.value.trim().split(' ');
     cartaGeradaParagraph.innerHTML = '';
     createWords(letter);
-
   } else {
     cartaGeradaParagraph.innerText = 'Por favor, digite o conteúdo da carta.';
   }
 }
 
-cartaGeradaParagraph.addEventListener('click', clickRerollClasses);
 criarCartaButton.addEventListener('click', createLetter);

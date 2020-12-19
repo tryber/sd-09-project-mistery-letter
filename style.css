@@ -23,3 +23,8 @@ body {
   font-family: Verdana;
   font-weight: 900;
 }
+
+.medium {
+  font-size: 30px;
+  padding: 10px;
+}

@@ -3,15 +3,18 @@ const cartaGeradaParagraph = document.getElementById('carta-gerada');
 const cartaTextoInput = document.getElementById('carta-texto');
 
 function createLetter() {
-  const letter = cartaTextoInput.value.split(' ');
-  if (letter) {
+  if (cartaTextoInput.value.trim()) {
+    const letter = cartaTextoInput.value.trim().split(' ');
     cartaGeradaParagraph.innerHTML = '';
-    console.log(letter);
     for (let index = 0; index < letter.length; index += 1) {
-      const wordSpan = document.createElement('span');
-      wordSpan.innerText = letter[index];
-      cartaGeradaParagraph.appendChild(wordSpan);
+      if (letter[index]) {
+        const wordSpan = document.createElement('span');
+        wordSpan.innerText = letter[index];
+        cartaGeradaParagraph.appendChild(wordSpan);
+      }
     }
+  } else {
+    alert('Por favor, digite o conteúdo da carta.');
   }
 }
 

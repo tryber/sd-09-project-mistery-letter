@@ -30,7 +30,6 @@ function addRandomClasses(wordSpan) {
 function clickRerollClasses(event) {
   const wordSpan = event.target;
   addRandomClasses(wordSpan);
-  console.log(wordSpan.className);
 }
 
 function createWords(letter) {

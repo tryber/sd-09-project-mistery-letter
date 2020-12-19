@@ -33,13 +33,13 @@ function randomClassTypes(object) {
   return array;
 }
 
-function addStyle(styleTypesArray, stylesObject, element) {
+function addStyle(styleTypesArray, object, element) {
+  if (element.classList) {
+    element.className = '';
+  }
   for (let index = 0; index < styleTypesArray.length; index += 1) {
-    if (element.classList) {
-      element.className = '';
-    }
     const styleTypeIndex = styleTypesArray[index];
-    const styleType = Object.values(stylesObject)[styleTypeIndex];
+    const styleType = Object.values(object)[styleTypeIndex];
     const selectedClassType = shuffle(styleType)[0];
     element.classList.add(selectedClassType);
   }
@@ -63,8 +63,8 @@ function wordCount() {
 
 // Cria texto da carta
 function insertText(inputText, printedLetter) {
-  const newSpan = document.createElement('span');
   if (inputText === 'Por favor, digite o conteúdo da carta.') {
+    const newSpan = document.createElement('span');
     newSpan.innerText = inputText;
     printedLetter.appendChild(newSpan);
   } else {
@@ -72,9 +72,7 @@ function insertText(inputText, printedLetter) {
     for (let index = 0; index < arrayText.length; index += 1) {
       const newSpan = document.createElement('span');
       newSpan.innerText = arrayText[index];
-      newSpan.addEventListener('click', () => {
-        addStyle(randomClassTypes(stylesObject), stylesObject, newSpan);
-      });
+      newSpan.addEventListener('click', () => addStyle(randomClassTypes(stylesObject), stylesObject, newSpan));
       printedLetter.appendChild(newSpan);
     }
     createRandomStyle();

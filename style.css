@@ -162,7 +162,7 @@ footer button {
 }
 
 .linkedin-button:hover {
-  background-color: rgb(14, 118, 168);
+  background-color: rgb(14 , 118 , 168);
   border-radius: 15%;
   color: white;
   cursor: pointer;

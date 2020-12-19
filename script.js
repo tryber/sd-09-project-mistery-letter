@@ -16,6 +16,7 @@ function createLetter() {
   if (cartaTextoInput.value.trim()) {
     const letter = cartaTextoInput.value.trim().split(' ');
     cartaGeradaParagraph.innerHTML = '';
+    createWords(letter);
   } else {
     cartaGeradaParagraph.innerText = 'Por favor, digite o conteúdo da carta.';
   }

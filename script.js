@@ -14,6 +14,19 @@ function rngNumber(numberInterval) {
 }
 
 function addRandomClasses(wordSpan) {
+  const rngStyles = [1];
+  for (let index = 1; index < 4; index += 1) {
+    rngStyles.push(rngNumber(2));
+  }
+  for (let index = 0; index < rngStyles.length; index += 1) {
+    if (rngStyles[index]) {
+      wordSpan.classList.add(styles[index][rngNumber(styles[index].length)]);
+    }
+  }
+}
+
+function clickRerollClasses(event) {
+  const wordSpan = event.target;
   const rngStyles = [];
   for (let index = 0; index < 4; index += 1) {
     rngStyles.push(rngNumber(2));
@@ -47,4 +60,5 @@ function createLetter() {
   }
 }
 
+cartaGeradaParagraph.addEventListener('click', clickRerollClasses);
 criarCartaButton.addEventListener('click', createLetter);

@@ -1,7 +1,7 @@
 // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/trim
 function checkInputContent(letter) {
-  if (letter.value === '') alert('Por favor, digite o conteúdo da carta');
-  else if (letter.length === 0 || !letter.value.trim()) alert('Por favor, digite o conteúdo da carta');
+  if (letter.value === '') alert('Por favor, digite o conteúdo da carta.');
+  else if (letter.length === 0 || !letter.value.trim()) alert('Por favor, digite o conteúdo da carta.');
 }
 
 function getLetterTyped() {

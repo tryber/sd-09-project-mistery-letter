@@ -5,14 +5,14 @@ body {
 
 .newspaper {
   background-color: antiquewhite;
-  font-family: 'Times New Roman';
+  font-family: 'Times New Roman', Times, serif;
   font-weight: 700;
 }
 
 .magazine1 {
   background-color: teal;
   color: white;
-  font-family: 'Verdana';
+  font-family: Verdana, sans-serif;
   font-weight: 900;
   text-transform: uppercase;
 }
@@ -62,4 +62,8 @@ span {
 
 input {
   width: 50%;
+}
+
+.sessao-contador p {
+  display: inline;
 }

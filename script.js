@@ -6,7 +6,7 @@ function checkInputContent(letter) {
     cartaGerada.innerText = 'Por favor, digite o conteúdo da carta.';
     cartaTextoInput.value = '';
   }
-    return letter.value;
+  return letter.value;
 }
 
 function getLetterTyped() {
@@ -77,24 +77,31 @@ function addClassesToLetter() {
   }
 }
 
+function wordsCounter() {
+  const words = document.querySelectorAll('span');
+  const counterLetter = document.querySelector('#carta-contador');
+  counterLetter.innerText = words.length;
+}
+
 function generateLetter() {
   destroySpanLetter();
   let letterText = getLetterTyped();
   letterText = trasnformLetterToArray(letterText);
   tranformArrayTextSpan(letterText);
   addClassesToLetter();
+  wordsCounter();
 }
 
 document.addEventListener('click', (event) => {
-  let clickedElement = event.target;
-  let spans = document.querySelectorAll('span')
+  const clickedElement = event.target;
+  const spans = document.querySelectorAll('span');
   if (clickedElement === document.querySelector('#criar-carta')) generateLetter();
-  for ( let index = 0; index < spans.length; index += 1) {
+  for (let index = 0; index < spans.length; index += 1) {
     if (clickedElement === spans[index]) {
       addClassesToSpan(event.target);
     }
   }
-})
+});
 
 // function listeners() {
 //   const criarCartaButton = document.querySelector('#criar-carta');

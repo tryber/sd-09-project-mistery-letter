@@ -72,7 +72,6 @@ function addClassesToSpan(word) {
 
 function addClassesToLetter() {
   const letterWords = document.querySelectorAll('span');
-  console.log(letterWords);
   for (let index = 0; index < letterWords.length; index += 1) {
     addClassesToSpan(letterWords[index]);
   }
@@ -86,11 +85,22 @@ function generateLetter() {
   addClassesToLetter();
 }
 
-function listeners() {
-  const criarCartaButton = document.querySelector('#criar-carta');
-  criarCartaButton.addEventListener('click', generateLetter);
-}
+document.addEventListener('click', (event) => {
+  let clickedElement = event.target;
+  let spans = document.querySelectorAll('span')
+  if (clickedElement === document.querySelector('#criar-carta')) generateLetter();
+  for ( let index = 0; index < spans.length; index += 1) {
+    if (clickedElement === spans[index]) {
+      addClassesToSpan(event.target);
+    }
+  }
+})
+
+// function listeners() {
+//   const criarCartaButton = document.querySelector('#criar-carta');
+//   criarCartaButton.addEventListener('click', generateLetter);
+// }
 
 window.onload = function () {
-  listeners();
+  // listeners();
 };

@@ -5,7 +5,7 @@ body {
 
 .newspaper {
   background-color: antiquewhite;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Times New Roman', 'Times' serif;
   font-weight: 700;
 }
 
@@ -20,7 +20,7 @@ body {
 .magazine2 {
   background-image: url('images/pink-pattern.png');
   color: fuchsia;
-  font-family: Verdana;
+  font-family: Verdana, sans-serif;
   font-weight: 900;
 }
 

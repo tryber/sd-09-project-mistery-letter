@@ -22,10 +22,10 @@ function trasnformLetterToArray(letter) {
 
 function tranformArrayTextSpan(letterArray) {
   const cartaGerada = document.querySelector('#carta-gerada');
-  for (const word of letterArray) {
-    if (word) {
+  for (let index = 0; index < letterArray.length; index += 1) {
+    if (letterArray[index]) {
       const wordSpan = document.createElement('span');
-      wordSpan.innerText = word;
+      wordSpan.innerText = letterArray[index];
       cartaGerada.appendChild(wordSpan);
     }
   }
@@ -98,6 +98,7 @@ document.addEventListener('click', (event) => {
   if (clickedElement === document.querySelector('#criar-carta')) generateLetter();
   for (let index = 0; index < spans.length; index += 1) {
     if (clickedElement === spans[index]) {
+      event.target.className = '';
       addClassesToSpan(event.target);
     }
   }

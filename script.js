@@ -8,15 +8,14 @@ function errorMessage() {
     //const spanMessage = document.createElement('span');
     //spanMessage.id = 'error-message';
     if (inputContent.match(/^\s*$/)) { // Nada ou espaço vazio
-     alert('Por favor, digite o conteúdo da carta.');
+      paragraph.innerHTML = 'Por Favor, digite o contúdo da carta.'
       // spanMessage.innerHTML = 'Por favor, digite o conteúdo da carta.';
       // paragraph.appendChild(spanMessage);
     } else {
-        getWord();
+      paragraph.innerHTML = '';
+      // const messageError = document.querySelector('#error-message');
+      // messageError.parentNode.removeChild(messageError);
     }
-    //   const messageError = document.querySelector('#error-message');
-    //   messageError.parentNode.removeChild(messageError);
-    // }
   });
 }
 errorMessage();

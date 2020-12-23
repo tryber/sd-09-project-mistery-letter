@@ -5,16 +5,14 @@ const paragraph = document.querySelector('#carta-gerada');
 function errorMessage() {
   button.addEventListener('click', function () {
     const inputContent = input.value;
-    //const spanMessage = document.createElement('span');
-    //spanMessage.id = 'error-message';
+    const spanMessage = document.createElement('span');
+    spanMessage.id = 'error-message';
     if (inputContent.match(/^\s*$/)) { // Nada ou espaço vazio
-      paragraph.innerHTML = 'Por Favor, digite o contúdo da carta.'
-      // spanMessage.innerHTML = 'Por favor, digite o conteúdo da carta.';
-      // paragraph.appendChild(spanMessage);
+      spanMessage.innerHTML = 'Por favor, digite o conteúdo da carta.';
+      paragraph.appendChild(spanMessage);
     } else {
-      paragraph.innerHTML = '';
-      // const messageError = document.querySelector('#error-message');
-      // messageError.parentNode.removeChild(messageError);
+      const messageError = document.querySelector('#error-message');
+      messageError.parentNode.removeChild(messageError);
     }
   });
 }

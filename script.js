@@ -1,6 +1,7 @@
 const input = document.querySelector('#carta-texto');
 const button = document.querySelector('#criar-carta');
 const paragraph = document.querySelector('#carta-gerada');
+const contador = document.querySelector('#carta-contador');
 
 function errorMessage() {
   const spanMessage = document.createElement('span');
@@ -29,10 +30,20 @@ function getWord() {
       for (let index = 0; index < wordsArray.length; index += 1) {
         const span = document.createElement('span');
         span.innerHTML = wordsArray[index];
-        span.class = 'text';
+        span.className = 'text';
         paragraph.appendChild(span);
       }
     }
   });
 }
 getWord();
+
+function wordCounter() {
+  button.addEventListener('click', function () {
+    const numberOfWords = document.querySelectorAll('.text');
+    for(let index = 0; index < numberOfWords.length; index += 1) {
+      contador.innerHTML = `Total de palavras na carta: ${[index + 1]}`
+    }
+  });
+}
+wordCounter();

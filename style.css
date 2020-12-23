@@ -4,14 +4,14 @@ span {
 
 .newspaper {
   background-color: antiquewhite;
-  font-family: Times New Roman;
-  font-weight: bold;
+  font-family: Times New Roman, Times, serif;
+  font-weight: 700;
 }
 
 .magazine1 {
   background-color: teal;
   color: white;
-  font-family: Verdana;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 900;
   text-transform: uppercase;
 }
@@ -19,7 +19,7 @@ span {
 .magazine2 {
   background-image: url('/images/pink-pattern.png');
   color: fuchsia;
-  font-family: Verdana;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 900;
 }
 

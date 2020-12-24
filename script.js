@@ -3,19 +3,28 @@ const button = document.querySelector('#criar-carta');
 const paragraph = document.querySelector('#carta-gerada');
 const contador = document.querySelector('#carta-contador');
 
-function randomClasses() {
-  const backGround = ['newspaper', 'magazine1', 'magazine2'];
-  const size = ['medium', 'big', 'reallybig'];
-  const rotation = ['rotateleft', 'rotateright'];
-  const inclination = ['skewleft', 'skewright'];
-  let style = backGround[Math.floor(Math.random() * backGround.length)];
-  let sizeStyle = size[Math.floor(Math.random() * size.length)];
-  let rotate = rotation[Math.floor(Math.random() * rotation.length)];
-  let inclinate = inclination[Math.floor(Math.random() * inclination.length)];
-  let arrayStyle = [style, sizeStyle, rotate, inclinate];
-  return arrayStyle.join(' ');
+function getStyleClasses() {
+  let styles = {
+    backGround: ['newspaper', 'magazine1', 'magazine2'],
+    size: ['medium', 'big', 'reallybig'],
+    rotation: ['rotateleft', 'rotateright'],
+    inclination: ['skewleft', 'skewright'],
+  }
+  let = allStyles = Object.values(styles) 
+    return allStyles;
 }
-randomClasses();
+let allClasses = getStyleClasses();
+
+function randomClasses(classes) {
+  let randomClasse = classes;
+  let allStyleClasses = [];
+  for (let value of randomClasse) {
+    allStyleClasses.push(value[Math.floor(Math.random() * value.length)]);
+  }
+  const arrayToSting = allStyleClasses.join(' ');
+  return arrayToSting;
+}
+randomClasses(allClasses);
 
 function errorMessage() {
   const spanMessage = document.createElement('span');
@@ -44,7 +53,7 @@ function getWord() {
       for (let index = 0; index < wordsArray.length; index += 1) {
         const span = document.createElement('span');
         span.innerHTML = wordsArray[index];
-        span.className = `text ${randomClasses()}`;
+        span.className = `text ${randomClasses(allClasses)}`;
         paragraph.appendChild(span);
       }
     }

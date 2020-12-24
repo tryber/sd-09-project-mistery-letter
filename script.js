@@ -44,7 +44,7 @@ function wordCounter() {
     for (let index = 0; index < numberOfWords.length; index += 1) {
       let number = [index + 1];
       number = parseInt(number, 10);
-      contador.innerHTML += number;
+      contador.innerHTML = number;
     }
   });
 }

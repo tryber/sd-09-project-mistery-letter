@@ -6,9 +6,16 @@ function gerarCarta() {
   const words = cartaTexto.value.split(' ');
 
   for (let index = 0; index < words.length; index += 1){
-    const span = document.createElement('span');
-    span.innerText = words[index];
-    cartaGerada.appendChild(span);
+    if (words[index] !== '') {
+      const span = document.createElement('span');
+      span.innerText = words[index];
+      cartaGerada.appendChild(span);
+    }
+
+    const son = cartaGerada.querySelector('span');
+    if (son === null) {
+      cartaGerada.innerText = 'Por favor, digite o conteúdo da carta.';
+    }
   }
 }
 

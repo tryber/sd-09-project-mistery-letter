@@ -42,9 +42,8 @@ function wordCounter() {
   button.addEventListener('click', function () {
     const numberOfWords = document.querySelectorAll('.text');
     for(let index = 0; index < numberOfWords.length; index += 1) {
-      let number = [index + 1]
-      number = parseInt(number);
-      contador.innerHTML = `Total de palavras na carta: `;
+      let number = [index + 1];
+      number = parseInt(number, 10);
       contador.innerHTML += number;
     }
   });

@@ -115,7 +115,7 @@ O não cumprimento de um requisito, total ou parcialmente, impactará em sua ava
 
 * Neste projeto, você implementará um gerador de cartas misteriosas.
 
-**Ou seja, dado um valor digitado em um campo de texto, apresentar as palavras com uma aparência de uma carta onde cada palavra possui uma estilização própria.** 
+**Ou seja, dado um valor digitado em um campo de texto, apresentar as palavras com uma aparência de uma carta onde cada palavra possui uma estilização própria.**
 
 ### 1 - Deve haver um `input` com o `id="carta-texto"` onde o usuário poderá digitar o conteúdo da carta.
 

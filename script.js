@@ -4,22 +4,22 @@ const paragraph = document.querySelector('#carta-gerada');
 const contador = document.querySelector('#carta-contador');
 
 function getStyleClasses() {
-  let styles = {
+  const styles = {
     backGround: ['newspaper', 'magazine1', 'magazine2'],
     size: ['medium', 'big', 'reallybig'],
     rotation: ['rotateleft', 'rotateright'],
     inclination: ['skewleft', 'skewright'],
-  }
-  let allStyles = Object.values(styles);
-    return allStyles;
+  };
+  const allStyles = Object.values(styles);
+  return allStyles;
 }
-let allClasses = getStyleClasses();
+const allClasses = getStyleClasses();
 
 function randomClasses(classes) {
-  let randomClasse = classes;
-  let allStyleClasses = [];
-  for (let value of randomClasse) {
-    allStyleClasses.push(value[Math.floor(Math.random() * value.length)]);
+  const randomClasse = classes;
+  const allStyleClasses = [];
+  for (let value in randomClasse) {
+    allStyleClasses.push(randomClasse[value][Math.floor(Math.random() * randomClasse[value].length)]);
   }
   const arrayToSting = allStyleClasses.join(' ');
   return arrayToSting;

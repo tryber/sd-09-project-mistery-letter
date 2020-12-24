@@ -50,8 +50,8 @@ function getWord() {
       for (let index = 0; index < wordsArray.length; index += 1) {
         const span = document.createElement('span');
         span.innerHTML = wordsArray[index];
-        span.className = `text ${randomClasse.backGround[Math.floor(Math.random() * 3)]}`
-
+        span.className = `text ${randomClasse.backGround}`
+        span[Math.floor(Math.random() * 3)]
         paragraph.appendChild(span);
       }
     }

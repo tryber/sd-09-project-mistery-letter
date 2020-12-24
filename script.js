@@ -18,8 +18,9 @@ const allClasses = getStyleClasses();
 function randomClasses(classes) {
   const randomClasse = classes;
   const allStyleClasses = [];
-  for (let value in randomClasse) {
-    allStyleClasses.push(randomClasse[value][Math.floor(Math.random() * randomClasse[value].length)]);
+  for (let value = 0; value < randomClasse.length; value += 1) {
+    let values = randomClasse[value];
+    allStyleClasses.push(values[Math.floor(Math.random() * 4)]);
   }
   const arrayToSting = allStyleClasses.join(' ');
   return arrayToSting;

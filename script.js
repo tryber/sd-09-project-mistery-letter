@@ -10,7 +10,7 @@ function getStyleClasses() {
     rotation: ['rotateleft', 'rotateright'],
     inclination: ['skewleft', 'skewright'],
   }
-  let = allStyles = Object.values(styles) 
+  let allStyles = Object.values(styles);
     return allStyles;
 }
 let allClasses = getStyleClasses();

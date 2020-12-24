@@ -10,22 +10,17 @@ function getStyleClasses() {
     rotation: ['rotateleft', 'rotateright'],
     inclination: ['skewleft', 'skewright'],
   };
-  const allStyles = Object.values(styles);
-  return allStyles;
+  //const allStyles = Object.values(styles);
+  return styles;
 }
-const allClasses = getStyleClasses();
+getStyleClasses();
 
-function randomClasses(classes) {
-  const randomClasse = classes;
-  const allStyleClasses = [];
-  for (let value = 0; value < randomClasse.length; value += 1) {
-    let values = randomClasse[value];
-    allStyleClasses.push(values[Math.floor(Math.random() * 4)]);
-  }
-  const arrayToSting = allStyleClasses.join(' ');
-  return arrayToSting;
+function randomClasses() {
+  const randomClasse = getStyleClasses();
+  let test = randomClasse.backGround[Math.floor(Math.random() * 3)]
+  return test
 }
-randomClasses(allClasses);
+randomClasses();
 
 function errorMessage() {
   const spanMessage = document.createElement('span');
@@ -44,6 +39,7 @@ function errorMessage() {
 errorMessage();
 
 function getWord() {
+  const randomClasse = getStyleClasses();
   button.addEventListener('click', function () {
     const wordString = (input.value);
     if (!wordString.match(/^\s*$/)) {
@@ -54,7 +50,8 @@ function getWord() {
       for (let index = 0; index < wordsArray.length; index += 1) {
         const span = document.createElement('span');
         span.innerHTML = wordsArray[index];
-        span.className = `text ${randomClasses(allClasses)}`;
+        span.className = `text ${randomClasse.backGround[Math.floor(Math.random() * 3)]}`
+
         paragraph.appendChild(span);
       }
     }

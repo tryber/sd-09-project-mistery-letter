@@ -35,12 +35,27 @@ function randomClass() {
 function aplyClasses() {
   const spans = document.querySelectorAll('span');
   if (spans.length === 0) {
-    return console.log('Por favor, digite o conteúdo da carta.');
+    return cartaGerada.innerText = 'Por favor, digite o conteúdo da carta.';
   }
 
-  for (let index = 0; index < spans.length; index += 1) {
-    for (item of randomClass()) {
-      spans[index].classList.add(item);
+  for (let index1 = 0; index1 < spans.length; index1 += 1) {
+    const classesReference = randomClass();
+    for (let index2 = 0; index2 < classesReference.length; index2 += 1) {
+      spans[index1].classList.add(classesReference[index2]);
     }
   }
 }
+
+function changingWordClass(span) {
+  const classesReference = randomClass();
+  let addClasses = '';
+
+  for (let index = 0; index < classesReference.length; index += 1) {
+    addClasses += ` ${classesReference[index]}`;
+  }
+  span.className = addClasses;
+}
+
+cartaGerada.addEventListener('click', (event) => {
+  changingWordClass(event.target);
+})

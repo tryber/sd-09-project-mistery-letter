@@ -1,0 +1,69 @@
+/* Cores fonte e weight */
+
+/* Requisito 6 */
+.newspaper {
+  background-color: antiquewhite;
+  font-family: "Times New Roman";
+  font-weight: bold;
+}
+
+/* Requisito 7 */
+.magazine1 {
+  background-color: teal;
+  color: white;
+  font-family: Verdana;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+/* Requisito 8 */
+.magazine2 {
+  background-image: url('./images/pink-pattern.png');
+  color: fuchsia;
+  font-family: Verdana;
+  font-weight: 900;
+}
+
+/* Tamanho e espaçamento */
+
+/* Requisito 9 */
+.medium {
+  font-size: 20px;
+  padding: 8px;
+}
+
+/* Requisito 10 */
+.big {
+  font-size: 30px;
+  padding: 10px;
+}
+
+/* Requisito 11 */
+.reallybig {
+  font-size: 40px;
+  padding: 15px;
+}
+
+/* Rotacao */
+
+/* Requisito 12 */
+.rotateleft {
+  transform: rotate(-5deg);
+}
+
+/* Requisito 13 */
+.rotateright {
+  transform: rotate(5deg);
+}
+
+/* Inclinacao */
+
+/* Requisito 14 */
+.skewleft {
+  transform: skewX(10deg);
+}
+
+/* Requisito 15 */
+.skewright {
+  transform: skewX(-10deg);
+}

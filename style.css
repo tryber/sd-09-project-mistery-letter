@@ -4,7 +4,7 @@
 .newspaper {
   background-color: antiquewhite;
   font-family: Times New Roman, Times, serif;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 /* Requisito 7 */
@@ -92,14 +92,14 @@ span {
 body {
   background-color: rgb(162 , 210 , 255);
   background-image: url('/images/background.jpg');
-  background-position-x: center;
   background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 .paragraphHolder {
   margin: auto;
   text-align: center;
-  width: 85%;
+  width: 75%;
 }
 
 .paragraphHolder span {
@@ -107,7 +107,7 @@ body {
 }
 
 .paragraphHolder p {
-  margin-left: 90px;
+  margin-left: 80px;
 }
 
 .extraStuff {

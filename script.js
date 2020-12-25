@@ -15,15 +15,29 @@ function getStyleClasses() {
 }
 getStyleClasses();
 
-function randomClassesTwo(two) {
-  const randomTwo = two[Math.floor(Math.random() * 2)]
-  return randomTwo;
+function valuesOfClasses() {
+  let allValues = getStyleClasses();
+  let all = [];
+  for (let index = 0; index < allValues.length; index += 1) {
+    all.push(allValues[index])
+  }
+  let string = all.toString();
+  let space = string.replace(/,/g, ' ');
+  return space;
 }
+const allClasses = valuesOfClasses();
 
-function randomClassesThree(three) {
-  const randomThree = three[Math.floor(Math.random() * 3)]
-  return randomThree;
+function randomClassesThree() {
+  const classesRandom = getStyleClasses();
+  let randomThree = [];
+  for (let index = 0; index < classesRandom.length; index += 1) {
+    randomThree.push(classesRandom[index][Math.floor(Math.random() * 4)])
+  }
+  const arrayRandom = randomThree.toString();
+  let spaces = arrayRandom.replace(/,/g, ' ');
+  return spaces;
 }
+randomClassesThree();
 
 function errorMessage() {
   const spanMessage = document.createElement('span');
@@ -41,7 +55,7 @@ function errorMessage() {
 }
 errorMessage();
 
-function getWord() {
+function getWord(classe) {
   button.addEventListener('click', function () {
     const wordString = (input.value);
     if (!wordString.match(/^\s*$/)) {
@@ -52,37 +66,23 @@ function getWord() {
       for (let index = 0; index < wordsArray.length; index += 1) {
         const span = document.createElement('span');
         span.innerHTML = wordsArray[index];
+        span.classList = classe
         paragraph.appendChild(span);
       }
     }
   });
 }
-getWord();
+getWord(allClasses);
 
-function valuesOfClasses() {
-  let allValues = getStyleClasses();
-  let all = [];
-  for (let index = 0; index < allValues.length; index += 1) {
-    all.push(allValues[index])
-  }
-  let string = all.toString();
-  let space = string.replace(/,/g, ' ');
-  return space;
-}
-const allClasses = valuesOfClasses();
-
-function getClassesRandom(classe) {
+function getClassesRandom() {
   button.addEventListener('click', function () {
     let tagSpan = document.getElementsByTagName('span');
-    let classNam = [];
     for (let index = 0; index < tagSpan.length; index += 1) {
-      tagSpan[index].classList = classe
-      classNam.push(tagSpan[index].classList)
+      tagSpan[index].classList = randomClassesThree();
     }
-    console.log(classNam)
   });
 }
-getClassesRandom(allClasses);
+getClassesRandom();
 
 function wordCounter() {
   button.addEventListener('click', function () {

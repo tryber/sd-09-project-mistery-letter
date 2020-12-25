@@ -3,7 +3,7 @@
 /* Requisito 6 */
 .newspaper {
   background-color: antiquewhite;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: Times New Roman, Times, serif;
   font-weight: bold;
 }
 
@@ -66,4 +66,52 @@
 /* Requisito 15 */
 .skewright {
   transform: skewX(-10deg);
+}
+
+.inputHolder {
+  margin: 20px auto 50px;
+  text-align: center;
+}
+
+.inputHolder input {
+  font-size: 1.2em;
+  text-align: center;
+  width: 800px;
+}
+
+.inputHolder button {
+  border-radius: 50px;
+  font-size: 1.2em;
+  margin-left: 20px;
+}
+
+span {
+  display: inline-block;
+}
+
+body {
+  background-color: rgb(162 , 210 , 255);
+  background-image: url('/images/background.jpg');
+  background-position-x: center;
+  background-repeat: no-repeat;
+}
+
+.paragraphHolder {
+  margin: auto;
+  text-align: center;
+  width: 85%;
+}
+
+.paragraphHolder span {
+  margin-top: 12px;
+}
+
+.paragraphHolder p {
+  margin-left: 90px;
+}
+
+.extraStuff {
+  font-size: 20px;
+  margin-top: 200px;
+  text-align: center;
 }

@@ -1,7 +1,5 @@
-const tipo1 = ['newspaper', 'magazine1', 'magazine2', 'blank'];
-const tipo2 = ['medium', 'big', 'reallybig'];
-const tipo3 = ['rotateleft', 'rotateright', 'noRotation'];
-const tipo4 = ['skewleft', 'skewright', 'noInclination'];
+const propriedades = [['newspaper', 'magazine1', 'magazine2'], ['medium', 'big', 'reallybig'],
+['rotateleft', 'rotateright'], ['skewleft', 'skewright']];
 
 function pickRandom(array) {
   const myChoice = Math.floor(Math.random() * array.length);
@@ -41,10 +39,10 @@ generateButton();
 // Requisito 17
 function mudaEstilos(self) {
   self.target.classList = '';
-  self.target.classList.toggle(pickRandom(tipo1));
-  self.target.classList.toggle(pickRandom(tipo2));
-  self.target.classList.toggle(pickRandom(tipo3));
-  self.target.classList.toggle(pickRandom(tipo4));
+  self.target.classList.toggle(pickRandom(propriedades[0]));
+  self.target.classList.toggle(pickRandom(propriedades[1]));
+  self.target.classList.toggle(pickRandom(propriedades[2]));
+  self.target.classList.toggle(pickRandom(propriedades[3]));
 }
 
 function geradorDeCarta() {
@@ -70,10 +68,10 @@ function geradorDeCarta() {
 function associaEstiloAoSpan() {
   const myNodeList = document.querySelectorAll('#carta-gerada>span');
   for (let index = 0; index < myNodeList.length; index += 1) {
-    myNodeList[index].classList.toggle(pickRandom(tipo1));
-    myNodeList[index].classList.toggle(pickRandom(tipo2));
-    myNodeList[index].classList.toggle(pickRandom(tipo3));
-    myNodeList[index].classList.toggle(pickRandom(tipo4));
+    myNodeList[index].classList.toggle(pickRandom(propriedades[0]));
+    myNodeList[index].classList.toggle(pickRandom(propriedades[1]));
+    myNodeList[index].classList.toggle(pickRandom(propriedades[2]));
+    myNodeList[index].classList.toggle(pickRandom(propriedades[3]));
   }
 }
 

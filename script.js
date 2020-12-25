@@ -55,7 +55,7 @@ function errorMessage() {
 }
 errorMessage();
 
-function getWord(classe) {
+function getWord() {
   button.addEventListener('click', function () {
     const wordString = (input.value);
     if (!wordString.match(/^\s*$/)) {
@@ -66,23 +66,23 @@ function getWord(classe) {
       for (let index = 0; index < wordsArray.length; index += 1) {
         const span = document.createElement('span');
         span.innerHTML = wordsArray[index];
-        span.classList = classe
         paragraph.appendChild(span);
       }
     }
   });
 }
-getWord(allClasses);
+getWord();
 
-function getClassesRandom() {
+function getClassesRandom(classe) {
   button.addEventListener('click', function () {
     let tagSpan = document.getElementsByTagName('span');
     for (let index = 0; index < tagSpan.length; index += 1) {
-      tagSpan[index].classList = randomClassesThree();
+      tagSpan[index].classList = `text ${randomClassesThree()}`;
     }
+    paragraph.lastElementChild.classList = classe
   });
 }
-getClassesRandom();
+getClassesRandom(allClasses);
 
 function wordCounter() {
   button.addEventListener('click', function () {

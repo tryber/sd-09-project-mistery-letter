@@ -31,7 +31,7 @@ function randomClassesThree() {
   const classesRandom = getStyleClasses();
   let randomThree = [];
   for (let index = 0; index < classesRandom.length; index += 1) {
-    randomThree.push(classesRandom[index][Math.floor(Math.random() * 4)])
+    randomThree.push(classesRandom[index][Math.floor(Math.random() * 3)])
   }
   const arrayRandom = randomThree.toString();
   let spaces = arrayRandom.replace(/,/g, ' ');
@@ -73,25 +73,25 @@ function getWord() {
 }
 getWord();
 
-function getClassesRandom(classe) {
+function getClassesRandom() {
   button.addEventListener('click', function () {
     let tagSpan = document.getElementsByTagName('span');
     for (let index = 0; index < tagSpan.length; index += 1) {
-      tagSpan[index].classList = `text ${randomClassesThree()}`;
+      tagSpan[index].classList = `text ${randomClassesThree()} ' ' ' ' ' ' ' '`;
     }
-    paragraph.lastElementChild.classList = classe
   });
 }
-getClassesRandom(allClasses);
+getClassesRandom();
 
 function wordCounter() {
   button.addEventListener('click', function () {
     const numberOfWords = document.querySelectorAll('.text');
+    let counter = 1;
     for (let index = 0; index < numberOfWords.length; index += 1) {
-      let number = [index + 1];
-      number = parseInt(number, 10);
-      contador.innerHTML = number;
+      counter = [index + 1];
     }
+    counter = parseInt(counter);
+    contador.innerHTML = counter;
   });
 }
 wordCounter();

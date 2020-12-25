@@ -2,6 +2,21 @@ const cartaTexto = document.querySelector('#carta-texto');
 const criarCarta = document.querySelector('#criar-carta');
 const cartaGerada = document.querySelector('#carta-gerada');
 
+function aplyClasses() {
+  const spans = document.querySelectorAll('span');
+  if (spans.length === 0) {
+    cartaGerada.innerText = 'Por favor, digite o conteúdo da carta.';
+    return;
+  }
+
+  for (let index1 = 0; index1 < spans.length; index1 += 1) {
+    const classesReference = randomClass();
+    for (let index2 = 0; index2 < classesReference.length; index2 += 1) {
+      spans[index1].classList.add(classesReference[index2]);
+    }
+  }
+}
+
 function gerarCarta() {
   const words = cartaTexto.value.split(' ');
 
@@ -32,20 +47,6 @@ function randomClass() {
   return classesToAply;
 }
 
-function aplyClasses() {
-  const spans = document.querySelectorAll('span');
-  if (spans.length === 0) {
-    return cartaGerada.innerText = 'Por favor, digite o conteúdo da carta.';
-  }
-
-  for (let index1 = 0; index1 < spans.length; index1 += 1) {
-    const classesReference = randomClass();
-    for (let index2 = 0; index2 < classesReference.length; index2 += 1) {
-      spans[index1].classList.add(classesReference[index2]);
-    }
-  }
-}
-
 function changingWordClass(span) {
   const classesReference = randomClass();
   let addClasses = '';
@@ -58,4 +59,4 @@ function changingWordClass(span) {
 
 cartaGerada.addEventListener('click', (event) => {
   changingWordClass(event.target);
-})
+});

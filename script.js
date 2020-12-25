@@ -10,17 +10,20 @@ function getStyleClasses() {
     rotation: ['rotateleft', 'rotateright'],
     inclination: ['skewleft', 'skewright'],
   };
-  //const allStyles = Object.values(styles);
-  return styles;
+  const values = Object.values(styles)
+  return values;
 }
 getStyleClasses();
 
-function randomClasses() {
-  const randomClasse = getStyleClasses();
-  let test = randomClasse.backGround[Math.floor(Math.random() * 3)]
-  return test
+function randomClassesTwo(two) {
+  const randomTwo = two[Math.floor(Math.random() * 2)]
+  return randomTwo;
 }
-randomClasses();
+
+function randomClassesThree(three) {
+  const randomThree = three[Math.floor(Math.random() * 3)]
+  return randomThree;
+}
 
 function errorMessage() {
   const spanMessage = document.createElement('span');
@@ -39,7 +42,6 @@ function errorMessage() {
 errorMessage();
 
 function getWord() {
-  const randomClasse = getStyleClasses();
   button.addEventListener('click', function () {
     const wordString = (input.value);
     if (!wordString.match(/^\s*$/)) {
@@ -50,14 +52,37 @@ function getWord() {
       for (let index = 0; index < wordsArray.length; index += 1) {
         const span = document.createElement('span');
         span.innerHTML = wordsArray[index];
-        span.className = `text ${randomClasse.backGround}`
-        span[Math.floor(Math.random() * 3)]
         paragraph.appendChild(span);
       }
     }
   });
 }
 getWord();
+
+function valuesOfClasses() {
+  let allValues = getStyleClasses();
+  let all = [];
+  for (let index = 0; index < allValues.length; index += 1) {
+    all.push(allValues[index])
+  }
+  let string = all.toString();
+  let space = string.replace(/,/g, ' ');
+  return space;
+}
+const allClasses = valuesOfClasses();
+
+function getClassesRandom(classe) {
+  button.addEventListener('click', function () {
+    let tagSpan = document.getElementsByTagName('span');
+    let classNam = [];
+    for (let index = 0; index < tagSpan.length; index += 1) {
+      tagSpan[index].classList = classe
+      classNam.push(tagSpan[index].classList)
+    }
+    console.log(classNam)
+  });
+}
+getClassesRandom(allClasses);
 
 function wordCounter() {
   button.addEventListener('click', function () {

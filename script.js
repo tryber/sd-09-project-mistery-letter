@@ -62,8 +62,14 @@ function createMisteryLetter() {
   if (textNotBlank) {
     textParagraph.innerHTML = '';
     createSpansFromText(cleanInputText);
+    // Reference: https://flaviocopes.com/how-to-add-event-listener-multiple-elements-javascript/
+    document.querySelectorAll('span').forEach((item) => {
+      item.addEventListener('click', (event) => {
+        event.target.className = getRandomClassesStr();
+      });
+    });
   } else {
-    alert('Por favor, digite o conteúdo da carta.');
+    textParagraph.innerHTML = 'Por favor, digite o conteúdo da carta.';
   }
 }
 

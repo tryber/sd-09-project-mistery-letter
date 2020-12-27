@@ -1,3 +1,7 @@
+span {
+  display: inline-block;
+}
+
 .newspaper {
   background-color: antiquewhite;
   font-family: Times New Roman, serif;

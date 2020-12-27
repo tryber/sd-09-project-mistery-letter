@@ -1,40 +1,51 @@
-const inputField = document.querySelector('#carta-texto');
-const textContainer = document.querySelector('#carta-gerada');
+const input = document.querySelector('#carta-texto');
+const letterText = document.querySelector('#carta-gerada');
+const error = 'Por favor, digite o conteúdo da carta.';
 
-function appendRandomClass() {
-  const styleClasses = ['newspaper', 'magazine1', 'magazine2'];
-  const sizeClasses = ['medium', 'big', 'reallybig'];
-  const rotateClasses = ['rotateleft', 'rotateright'];
-  const skewClasses = ['skewleft', 'skewright'];
-}
+const styleClasses = [
+  ['newspaper', 'magazine1', 'magazine2'],
+  ['medium', 'big', 'reallybig'],
+  ['rotateleft', 'rotateright'],
+  ['skewleft', 'skewright']
+];
 
 function letterCounter() {
   const wordCounter = document.querySelector('#carta-contador');
   const letter = document.querySelectorAll('span');
-  wordCounter.innerText = `${letter.length} words`;
+  wordCounter.innerText = letter.length;
+}
+
+function generateLetterText() {
+  const phrase = input.value.split(' ');
+  for (let index = 0; index < phrase.length; index += 1) {
+    const word = document.createElement('span');
+    word.innerText = phrase[index];
+    letterText.appendChild(word);
+    letterText.innerHTML += ' ';
+  }
 }
 
 function generateLetter() {
-  const phrase = inputField.value.split(' ');
-  for (let index = 0; index < phrase.length; index += 1) {
-    const word = document.createElement('span');
-    // word.classList = appendRandomClass();
-    word.innerText = phrase[index];
-    textContainer.appendChild(word);
-    textContainer.innerHTML += ' ';
+  if (checkInputValue() === true) {
+    generateLetterText();
+    letterCounter();
+  } else {
+    letterText.innerHTML = error;
   }
-  letterCounter();
 }
 
 function checkInputValue() {
-  if (inputField.value.length > 0) {
-    generateLetter();
-  } else {
-    alert('Por favor, digite o conteúdo da carta.');
+  let check = false;
+  if (input.value.trim().length > 0 && letterText.innerText === error) {
+    letterText.innerText = '';
+    check = true;
+  } else if (input.value.trim().length > 0 && letterText.innerText !== error) {
+    check = true;
   }
+  return check;
 }
 
 window.onload = function () {
   const inputButton = document.querySelector('#criar-carta');
-  inputButton.addEventListener('click', checkInputValue);
+  inputButton.addEventListener('click', generateLetter);
 };

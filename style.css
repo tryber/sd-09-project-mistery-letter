@@ -1,10 +1,14 @@
+main {
+  text-align: center;
+}
+
 .big {
   font-size: 30px;
   padding: 10px;
 }
 
 .container {
-  display: inline-block
+  display: inline-block;
 }
 
 .magazine1 {
@@ -16,7 +20,7 @@
 }
 
 .magazine2 {
-  background-image: 'images/pink-pattern.png';
+  background-image: url(images/pink-pattern.png);
   color: fuchsia;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 900;
@@ -30,7 +34,7 @@
 .newspaper {
   background-color: antiquewhite;
   font-family: 'Times New Roman', Times, serif;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .reallybig {

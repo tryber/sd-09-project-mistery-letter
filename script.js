@@ -9,8 +9,7 @@ function getSpanFromWord(word) {
 }
 
 function createSpansFromText(inputText) {
-  // Reference: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/trim
-  const textArray = inputText.trim().split(' ');
+  const textArray = inputText.split(' ');
   for (let index = 0; index < textArray.length; index += 1) {
     const word = textArray[index];
     const wordSpan = getSpanFromWord(word);
@@ -19,13 +18,11 @@ function createSpansFromText(inputText) {
 }
 
 function createMisteryLetter() {
-  const inputText = textInput.value;
-  const blankTextRegex = /^\s+$/;
-  // Reference: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test
-  const testTextNotBlank = !(blankTextRegex.test(inputText));
-  const textNotEmptyOrBlank = (inputText !== '' && testTextNotBlank);
-  if (textNotEmptyOrBlank) {
-    createSpansFromText(inputText);
+  // Reference: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/trim
+  const cleanInputText = textInput.value.trim();
+  const textNotBlank = (cleanInputText !== '');
+  if (textNotBlank) {
+    createSpansFromText(cleanInputText);
   } else {
     alert('Por favor, digite o conteúdo da carta.');
   }

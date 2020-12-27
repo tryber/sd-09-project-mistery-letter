@@ -9,6 +9,8 @@ main {
 
 .container {
   display: inline-block;
+  height: 600px;
+  width: 100%;
 }
 
 .magazine1 {
@@ -20,7 +22,7 @@ main {
 }
 
 .magazine2 {
-  background-image: url(images/pink-pattern.png);
+  background-image: url('images/pink-pattern.png');
   color: fuchsia;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 900;
@@ -34,7 +36,7 @@ main {
 .newspaper {
   background-color: antiquewhite;
   font-family: 'Times New Roman', Times, serif;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .reallybig {

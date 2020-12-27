@@ -70,7 +70,7 @@ function createMisteryLetter() {
         event.target.className = getRandomClassesStr();
       });
     });
-    wordCounter.innerHTML = `${wordsSpans.length} palavras`;
+    wordCounter.innerHTML = wordsSpans.length;
   } else {
     textParagraph.innerHTML = 'Por favor, digite o conteúdo da carta.';
   }

@@ -1,6 +1,7 @@
 const createBtn = document.getElementById('criar-carta');
 const textInput = document.getElementById('carta-texto');
 const textParagraph = document.getElementById('carta-gerada');
+const wordCounter = document.getElementById('carta-contador');
 const styleClasses = {
   groups: ['styles', 'sizes', 'rotations', 'skews'],
   styles: ['newspaper', 'magazine1', 'magazine2'],
@@ -63,11 +64,13 @@ function createMisteryLetter() {
     textParagraph.innerHTML = '';
     createSpansFromText(cleanInputText);
     // Reference: https://flaviocopes.com/how-to-add-event-listener-multiple-elements-javascript/
-    document.querySelectorAll('span').forEach((item) => {
+    const wordsSpans = document.querySelectorAll('span');
+    wordsSpans.forEach((item) => {
       item.addEventListener('click', (event) => {
         event.target.className = getRandomClassesStr();
       });
     });
+    wordCounter.innerHTML = `${wordsSpans.length} palavras`;
   } else {
     textParagraph.innerHTML = 'Por favor, digite o conteúdo da carta.';
   }

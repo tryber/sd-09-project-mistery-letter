@@ -11,18 +11,19 @@ function appendRandomClass() {
 function letterCounter() {
   const wordCounter = document.querySelector('#carta-contador');
   const letter = document.querySelectorAll('span');
-  wordCounter.innerText = `${letter.length} words`
+  wordCounter.innerText = `${letter.length} words`;
 }
 
 function generateLetter() {
   const phrase = inputField.value.split(' ');
-  for (index = 0; index < phrase.length; index += 1) {
+  for (let index = 0; index < phrase.length; index += 1) {
     const word = document.createElement('span');
     // word.classList = appendRandomClass();
-    word.innerText = `${phrase[index]} `;
+    word.innerText = phrase[index];
     textContainer.appendChild(word);
+    textContainer.innerHTML += ' ';
   }
-  letterCounter()
+  letterCounter();
 }
 
 function checkInputValue() {

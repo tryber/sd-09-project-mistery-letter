@@ -7,6 +7,7 @@ button.addEventListener('click', () => {
   if (word.length === 0) {
     paragraph.innerText = 'Por favor, digite o conteúdo da carta.';
   } else {
+    paragraph.innerHTML = '';
     const newWords = word.split(' ');
     for (let index = 0; index < newWords.length; index += 1) {
       const span = document.createElement('span');

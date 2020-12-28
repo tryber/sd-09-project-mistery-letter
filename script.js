@@ -6,9 +6,12 @@ button.addEventListener('click', () => {
   const word = input.value;
   const newWords = word.split(' ');
   for (let index = 0; index < newWords.length; index += 1) {
+    if (word.length === 0) {
+      alert('Por favor, digite o conteúdo da carta.');
+    }
     const span = document.createElement('span');
     paragraph.appendChild(span);
-    span.innerHTML = `${newWords[index]}`;
+    span.innerText = newWords[index];
     console.log(newWords[index]);
   }
 })

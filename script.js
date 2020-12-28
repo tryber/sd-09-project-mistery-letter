@@ -3,17 +3,28 @@ const criarCarta = document.querySelector('#criar-carta');
 const cartaGerada = document.querySelector('#carta-gerada');
 const cartaContador = document.querySelector('#carta-contador');
 
+const classes = [['newspaper', 'magazine1', 'magazine2'], ['medium', 'big', 'reallybig'], ['rotateleft', 'rotateright'], ['skewleft', 'skewright']];
+function shuffle() {
+  let remainItem = classes.length, t, i;
+  while (remainItem) {
+    i = Math.floor(Math.random() * (remainItem -= 1));
+    t = classes[remainItem];
+    classes[remainItem] = classes[i];
+    classes[i] = t;
+  }
+  return classes;
+}
+
 function randomClass() {
-  const classes = [['newspaper', 'magazine1', 'magazine2'], ['medium', 'big', 'reallybig'], ['rotateleft', 'rotateright'], ['skewleft', 'skewright']];
   const classesToAply = [];
 
-  const numberOfGroups = classes.length;
+  const numberOfGroups = shuffle().length;
   const groups = Math.floor(Math.random() * numberOfGroups);
 
   for (let index = 0; index <= groups; index += 1) {
-    const numberOfClasses = classes[index].length;
+    const numberOfClasses = shuffle()[index].length;
     const chosenClasses = Math.floor(Math.random() * numberOfClasses);
-    classesToAply.push(classes[index][chosenClasses]);
+    classesToAply.push(shuffle()[index][chosenClasses]);
   }
   return classesToAply;
 }

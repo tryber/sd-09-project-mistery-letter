@@ -3,7 +3,8 @@ body {
 }
 
 .carta-gerada {
-  background-color: rgb(242 , 236 , 229);
+  background-color: rgb(245 , 245 , 245);
+  box-shadow: 5px 5px 10px rgba(0 , 0 , 0 , 0.1);
   height: 80vh;
   margin: 3vh auto;
   overflow-wrap: break-word;

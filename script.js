@@ -18,15 +18,16 @@ function shuffle() {
 }
 
 function randomClass() {
+  const shuffleClasses = shuffle();
   const classesToAply = [];
 
-  const numberOfGroups = shuffle().length;
+  const numberOfGroups = shuffleClasses.length;
   const groups = Math.floor(Math.random() * numberOfGroups);
 
   for (let index = 0; index <= groups; index += 1) {
-    const numberOfClasses = shuffle()[index].length;
+    const numberOfClasses = shuffleClasses[index].length;
     const chosenClasses = Math.floor(Math.random() * numberOfClasses);
-    classesToAply.push(shuffle()[index][chosenClasses]);
+    classesToAply.push(shuffleClasses[index][chosenClasses]);
   }
   return classesToAply;
 }

@@ -2,6 +2,12 @@ body {
   text-align: center;
 }
 
+.title {
+  font-family: Shadows Into Light, cursive;
+  font-size: 50px;
+  margin: 1vh 0 0 2vh;
+}
+
 .carta-gerada {
   background-color: whitesmoke;
   box-shadow: 5px 5px 10px rgba(0 , 0 , 0 , 0.1);
@@ -12,7 +18,7 @@ body {
 }
 
 .carta-texto {
-  margin-top: 5vh;
+  margin-top: 2vh;
   width: 35vw;
 }
 

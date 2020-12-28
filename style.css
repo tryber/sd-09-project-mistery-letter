@@ -1,3 +1,20 @@
+body {
+  text-align: center;
+}
+
+.carta-gerada {
+  background-color: rgb(242, 236, 229);
+  margin: 3vh auto;
+  width: 55vw;
+  height: 80vh;
+  overflow-wrap: break-word;
+}
+
+.carta-texto {
+  margin-top: 5vh;
+  width: 35vw;
+}
+
 .newspaper {
   background-color: antiquewhite;
   font-family: Times New Roman, Times, serif;

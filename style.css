@@ -1,0 +1,75 @@
+body {
+  text-align: center;
+}
+
+.title {
+  font-family: Shadows Into Light, cursive;
+  font-size: 50px;
+  margin: 1vh 0 0 2vh;
+}
+
+.carta-gerada {
+  background-color: whitesmoke;
+  box-shadow: 5px 5px 10px rgba(0 , 0 , 0 , 0.1);
+  height: 80vh;
+  margin: 3vh auto;
+  overflow-wrap: break-word;
+  width: 55vw;
+}
+
+.carta-texto {
+  margin-top: 2vh;
+  width: 35vw;
+}
+
+.newspaper {
+  background-color: antiquewhite;
+  font-family: Times New Roman, Times, serif;
+  font-weight: 700;
+}
+
+.magazine1 {
+  background-color: teal;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.magazine2 {
+  background-image: url('images/pink-pattern.png');
+  color: fuchsia;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 900;
+}
+
+.medium {
+  font-size: 20px;
+  padding: 8px;
+}
+
+.big {
+  font-size: 30px;
+  padding: 10px;
+}
+
+.reallybig {
+  font-size: 40px;
+  padding: 15px;
+}
+
+.rotateleft {
+  transform: rotate(-5deg);
+}
+
+.rotateright {
+  transform: rotate(5deg);
+}
+
+.skewleft {
+  transform: skew(10deg);
+}
+
+.skewright {
+  transform: skew(-10deg);
+}

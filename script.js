@@ -33,13 +33,25 @@ function aplyClasses() {
   }
 }
 
+function deleteLetter() {
+  const letter = document.querySelectorAll('span');
+  for (let item = 0; item < letter.length; item += 1) {
+    if (letter[item].parentNode) {
+      letter[item].parentNode.removeChild(letter[item]);
+    }
+  }
+}
+
 function gerarCarta() {
   const words = cartaTexto.value.split(' ');
+
+  deleteLetter();
 
   for (let index = 0; index < words.length; index += 1) {
     if (words[index] !== '') {
       const span = document.createElement('span');
       span.innerText = words[index];
+      span.style.display = 'inline-block';
       cartaGerada.appendChild(span);
       cartaContador.innerText = words.length;
     }
@@ -62,3 +74,59 @@ function changingWordClass(span) {
 cartaGerada.addEventListener('click', (event) => {
   changingWordClass(event.target);
 });
+
+// Tentativa 2
+// const cartaTexto = document.querySelector('#carta-texto');
+// const criarCarta = document.querySelector('#criar-carta');
+// const cartaGerada = document.querySelector('#carta-gerada');
+// const cartaContador = document.querySelector('#carta-contador');
+
+// const groups = {
+//   style: ['newspaper', 'magazine1', 'magazine2'],
+//   size: ['medium', 'big', 'realybig'],
+//   rotate: ['rotateleft', 'rotateright'],
+//   skew: ['skewleft', 'skewright']
+// }
+
+// function randomNumber(number) {
+//   let random = Math.floor(Math.random() * number);
+//   return random;
+// }
+// console.log(randomNumber(Object.keys(groups).length));
+
+// function shuffle(array) {
+//   let remainItem = array.length, t, i;
+//   while (remainItem) {
+//     i = Math.floor(Math.random() * (remainItem -= 1));
+//     t = array[remainItem];
+//     array[remainItem] = array[i];
+//     array[i] = t;
+//   }
+//   return array;
+// }
+// console.log(shuffle(Object.keys(groups)));
+// let test = shuffle(Object.keys(groups)[randomNumber(Object.keys(groups).length)]);
+// console.log(test);
+
+// function creatingLetter() {
+//   const wordArray = cartaTexto.value.split(' ');
+
+//   for (let index = 0; index < wordArray.length; index += 1) {
+//     if (wordArray[index] !== '') {
+//       const span = document.createElement('span');
+//       span.style.display = 'inline-block';
+//       span.innerText = wordArray[index];
+//       cartaGerada.appendChild(span);
+//     }
+//   }
+//   validation();
+// }
+// criarCarta.addEventListener('click', creatingLetter);
+
+// function validation() {
+//   const spans = document.querySelectorAll('span');
+
+//   if (spans.length === 0) {
+//     cartaGerada.innerText = 'Por favor, digite o conteúdo da carta.';
+//   }
+// }

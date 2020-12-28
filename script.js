@@ -5,7 +5,7 @@ const paragraph = document.querySelector('#carta-gerada');
 button.addEventListener('click', () => {
   const word = input.value;
   if (word.length === 0) {
-    paragraph.innerHTML = 'Por favor, digite o conteúdo da carta.'
+    paragraph.innerText = 'Por favor, digite o conteúdo da carta.';
   } else {
     const newWords = word.split(' ');
     for (let index = 0; index < newWords.length; index += 1) {

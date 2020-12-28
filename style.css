@@ -3,11 +3,11 @@ body {
 }
 
 .carta-gerada {
-  background-color: rgb(242, 236, 229);
-  margin: 3vh auto;
-  width: 55vw;
+  background-color: rgb(242 , 236 , 229);
   height: 80vh;
+  margin: 3vh auto;
   overflow-wrap: break-word;
+  width: 55vw;
 }
 
 .carta-texto {

@@ -62,7 +62,6 @@ function gerarCarta() {
 criarCarta.addEventListener('click', gerarCarta);
 
 function changingWordClass(span) {
-
   if (span.classList.contains('carta-gerada')) {
     return;
   }

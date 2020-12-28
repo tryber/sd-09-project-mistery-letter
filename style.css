@@ -1,5 +1,21 @@
 body {
   font-family: 'Courier New', Courier, monospace, sans-serif;
+  font-size: 18px;
   height: 768px;
+  text-align: center;
   width: 1366px;
+}
+
+input {
+  display: inline-block;
+  margin: 25px;
+  width: 80%;
+}
+
+p {
+  display: block;
+}
+
+.teste {
+  background-color: crimson;
 }

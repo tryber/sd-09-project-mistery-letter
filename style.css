@@ -6,7 +6,7 @@ body {
 
 .newspaper {
   background-color: antiquewhite;
-  font-family: 'Times New Roman', serif;
+  font-family: Times New Roman, serif;
   font-weight: bold;
 }
 
@@ -19,10 +19,10 @@ body {
 }
 
 .magazine2 {
- background-image: url('images/pink-pattern.png');
- color: fuchsia;
- font-family: Verdana;
- font-weight: 900;
+  background-image: url('images/pink-pattern.png');
+  color: fuchsia;
+  font-family: Verdana, sans-serif;
+  font-weight: 900;
 }
 
 .medium {
@@ -49,7 +49,7 @@ body {
 }
 
 .skewleft {
-  transform: skewX(-10deg);
+  transform: skewX(10deg);
 }
 
 .skewright {

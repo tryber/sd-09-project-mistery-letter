@@ -5,7 +5,9 @@ const cartaContador = document.querySelector('#carta-contador');
 
 const classes = [['newspaper', 'magazine1', 'magazine2'], ['medium', 'big', 'reallybig'], ['rotateleft', 'rotateright'], ['skewleft', 'skewright']];
 function shuffle() {
-  let remainItem = classes.length, t, i;
+  let t;
+  let i;
+  let remainItem = classes.length;
   while (remainItem) {
     i = Math.floor(Math.random() * (remainItem -= 1));
     t = classes[remainItem];

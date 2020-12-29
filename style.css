@@ -36,7 +36,7 @@ p {
 }
 
 .magazine2 {
-  background-image: 'images/pink-pattern.png';
+  background-image: url('images/pink-pattern.png');
   color: fuchsia;
   font-family: Verdana;
   font-weight: 900;
@@ -56,7 +56,7 @@ p {
   transform: rotate(-5deg);
 }
 
-.rotaterigth {
+.rotateright {
   transform: rotate(5deg);
 }
 
@@ -66,8 +66,4 @@ p {
 
 .skewright {
   transform: skewX(-10deg);
-}
-
-.teste {
-  background-color: crimson;
 }

@@ -22,10 +22,10 @@ function allClasses(classes) {
     1: 'skewleft',
     2: 'skewright',
   };
-  let randomBackGround = Math.ceil(Math.random() * 3);
-  let randomSize = Math.ceil(Math.random() * 3);
-  let randomRotation = Math.ceil(Math.random() * 2);
-  let randomInclination = Math.ceil(Math.random() * 2);
+  const randomBackGround = Math.ceil(Math.random() * 3);
+  const randomSize = Math.ceil(Math.random() * 3);
+  const randomRotation = Math.ceil(Math.random() * 2);
+  const randomInclination = Math.ceil(Math.random() * 2);
   classes.className += `${size[randomSize]} ${rotation[randomRotation]}`;
   classes.className += ` ${backGround[randomBackGround]} ${size[randomSize]} ${rotation[randomRotation]} ${inclination[randomInclination]}`;
   classes.className += ` ${rotation[randomRotation]} ${inclination[randomInclination]} ${backGround[randomBackGround]} ${size[randomSize]}`;

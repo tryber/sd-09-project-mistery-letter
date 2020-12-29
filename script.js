@@ -36,7 +36,7 @@ function allClasses(classes) {
   let randomSize = Math.ceil(Math.random() * 3);
   let randomRotation = Math.ceil(Math.random() * 2);
   let randomInclination = Math.ceil(Math.random() * 2);
-  classes.className += `${size[randomSize]} ${rotation[randomRotation]}`
+  classes.className += `${size[randomSize]} ${rotation[randomRotation]}`;
   classes.className += ` ${backGround[randomBackGround]} ${size[randomSize]} ${rotation[randomRotation]} ${inclination[randomInclination]}`;
   classes.className += ` ${backGround[randomBackGround]} ${size[randomSize]} ${rotation[randomRotation]} ${inclination[randomInclination]}`;
 }
@@ -68,7 +68,6 @@ function getWord() {
       for (let index = 0; index < wordsArray.length; index += 1) {
         const span = document.createElement('span');
         span.innerHTML = wordsArray[index];
-        span.className = 'text ';
         allClasses(span);
         paragraph.appendChild(span);
       }

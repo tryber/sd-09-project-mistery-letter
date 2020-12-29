@@ -20,11 +20,11 @@ function createSpan(mensageClear) {
   const father = document.querySelector('#carta-gerada');
   const mensageSpan = document.createElement('span');
   mensageSpan.innerText = `${mensageClear}`;
+  father.appendChild(mensageSpan);
   randomClass(mensageSpan, styleClass);
   randomClass(mensageSpan, sizesClass);
   randomClass(mensageSpan, rotationsClass);
   randomClass(mensageSpan, skewClass);
-  father.appendChild(mensageSpan);
 }
 
 function createMensage() {
@@ -55,3 +55,6 @@ function createMensage() {
 
 const buttonCreate = document.querySelector('#criar-carta');
 buttonCreate.addEventListener('click', createMensage);
+
+const spanRandom = document.querySelector('span')
+

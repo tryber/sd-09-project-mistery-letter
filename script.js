@@ -3,16 +3,6 @@ const button = document.querySelector('#criar-carta');
 const paragraph = document.querySelector('#carta-gerada');
 const contador = document.querySelector('#carta-contador');
 
-function two(randomTwo) {
-  const twoRandom = Math.ceil(Math.random() * 2);
-  return randomTwo[twoRandom];
-}
-
-function three(randomThree) {
-  const threeRandom = Math.ceil(Math.random() * 3);
-  return randomThree[threeRandom];
-}
-
 function allClasses(classes) {
   const backGround = {
     1: 'newspaper',
@@ -38,7 +28,7 @@ function allClasses(classes) {
   let randomInclination = Math.ceil(Math.random() * 2);
   classes.className += `${size[randomSize]} ${rotation[randomRotation]}`;
   classes.className += ` ${backGround[randomBackGround]} ${size[randomSize]} ${rotation[randomRotation]} ${inclination[randomInclination]}`;
-  classes.className += ` ${backGround[randomBackGround]} ${size[randomSize]} ${rotation[randomRotation]} ${inclination[randomInclination]}`;
+  classes.className += ` ${rotation[randomRotation]} ${inclination[randomInclination]} ${backGround[randomBackGround]} ${size[randomSize]}`;
 }
 
 function errorMessage() {
@@ -78,13 +68,8 @@ getWord();
 
 function wordCounter() {
   button.addEventListener('click', function () {
-    const numberOfWords = document.querySelectorAll('.text');
-    let counter = 1;
-    for (let index = 0; index < numberOfWords.length; index += 1) {
-      counter = [index + 1];
-    }
-    counter = parseInt(counter, 10);
-    contador.innerHTML = counter;
+    const numberOfWords = document.querySelector('#carta-gerada');
+    contador.innerHTML = numberOfWords.childElementCount;
   });
 }
 wordCounter();

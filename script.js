@@ -2,37 +2,41 @@ const input = document.querySelector('#carta-texto');
 const button = document.querySelector('#criar-carta');
 const paragraph = document.querySelector('#carta-gerada');
 const contador = document.querySelector('#carta-contador');
-
-let backGround = {
-  1: 'newspaper',
-  2: 'magazine1',
-  3: 'magazine2'
-}
-
-let size = {
-  1: 'medium',
-  2: 'big',
-  3: 'reallybig'
-};
-
-let rotation = {
-  1: 'rotateleft',
-  2: 'rotateright'
-};
-
-let inclination = {
-  1: 'skewleft', 
-  2: 'skewright'
-};
+const tagSpan = document.getElementsByClassName('.text');
 
 function two(randomTwo) {
-  let twoRandom = Math.ceil(Math.random() * 2);
+  const twoRandom = Math.ceil(Math.random() * 2);
   return randomTwo[twoRandom];
 }
 
 function three(randomThree) {
-  let threeRandom = Math.ceil(Math.random() * 3);
+  const threeRandom = Math.ceil(Math.random() * 3);
   return randomThree[threeRandom];
+}
+
+function allClasses(classes) {
+  const backGround = {
+    1: 'newspaper',
+    2: 'magazine1',
+    3: 'magazine2',
+  };
+  
+  const size = {
+    1: 'medium',
+    2: 'big',
+    3: 'reallybig',
+  };
+  
+  const rotation = {
+    1: 'rotateleft',
+    2: 'rotateright',
+  };
+  
+  const inclination = {
+    1: 'skewleft',
+    2: 'skewright',
+  };
+  classes.className += ` ${three(backGround)} ${three(size)} ${two(rotation)} ${two(inclination)}`; 
 }
 
 function errorMessage() {
@@ -62,7 +66,8 @@ function getWord() {
       for (let index = 0; index < wordsArray.length; index += 1) {
         const span = document.createElement('span');
         span.innerHTML = wordsArray[index];
-        span.classList = `text ${three(backGround)} ${three(size)} ${two(rotation)} ${two(inclination)};`
+        span.className = 'text';
+        allClasses(span);
         paragraph.appendChild(span);
       }
     }
@@ -77,7 +82,7 @@ function wordCounter() {
     for (let index = 0; index < numberOfWords.length; index += 1) {
       counter = [index + 1];
     }
-    counter = parseInt(counter)
+    counter = parseInt(counter, 10);
     contador.innerHTML = counter;
   });
 }

@@ -3,41 +3,37 @@ const button = document.querySelector('#criar-carta');
 const paragraph = document.querySelector('#carta-gerada');
 const contador = document.querySelector('#carta-contador');
 
-function getStyleClasses() {
-  const styles = {
-    backGround: ['newspaper', 'magazine1', 'magazine2'],
-    size: ['medium', 'big', 'reallybig'],
-    rotation: ['rotateleft', 'rotateright'],
-    inclination: ['skewleft', 'skewright'],
-  };
-  const values = Object.values(styles)
-  return values;
+let backGround = {
+  1: 'newspaper',
+  2: 'magazine1',
+  3: 'magazine2'
 }
-getStyleClasses();
 
-function valuesOfClasses() {
-  let allValues = getStyleClasses();
-  let all = [];
-  for (let index = 0; index < allValues.length; index += 1) {
-    all.push(allValues[index])
-  }
-  let string = all.toString();
-  let space = string.replace(/,/g, ' ');
-  return space;
-}
-const allClasses = valuesOfClasses();
+let size = {
+  1: 'medium',
+  2: 'big',
+  3: 'reallybig'
+};
 
-function randomClassesThree() {
-  const classesRandom = getStyleClasses();
-  let randomThree = [];
-  for (let index = 0; index < classesRandom.length; index += 1) {
-    randomThree.push(classesRandom[index][Math.floor(Math.random() * 3)])
-  }
-  const arrayRandom = randomThree.toString();
-  let spaces = arrayRandom.replace(/,/g, ' ');
-  return spaces;
+let rotation = {
+  1: 'rotateleft',
+  2: 'rotateright'
+};
+
+let inclination = {
+  1: 'skewleft', 
+  2: 'skewright'
+};
+
+function two(randomTwo) {
+  let twoRandom = Math.ceil(Math.random() * 2);
+  return randomTwo[twoRandom];
 }
-randomClassesThree();
+
+function three(randomThree) {
+  let threeRandom = Math.ceil(Math.random() * 3);
+  return randomThree[threeRandom];
+}
 
 function errorMessage() {
   const spanMessage = document.createElement('span');
@@ -66,22 +62,13 @@ function getWord() {
       for (let index = 0; index < wordsArray.length; index += 1) {
         const span = document.createElement('span');
         span.innerHTML = wordsArray[index];
+        span.classList = `text ${three(backGround)} ${three(size)} ${two(rotation)} ${two(inclination)};`
         paragraph.appendChild(span);
       }
     }
   });
 }
 getWord();
-
-function getClassesRandom() {
-  button.addEventListener('click', function () {
-    let tagSpan = document.getElementsByTagName('span');
-    for (let index = 0; index < tagSpan.length; index += 1) {
-      tagSpan[index].classList = `text ${randomClassesThree()} ' ' ' ' ' ' ' '`;
-    }
-  });
-}
-getClassesRandom();
 
 function wordCounter() {
   button.addEventListener('click', function () {
@@ -90,7 +77,7 @@ function wordCounter() {
     for (let index = 0; index < numberOfWords.length; index += 1) {
       counter = [index + 1];
     }
-    counter = parseInt(counter);
+    counter = parseInt(counter)
     contador.innerHTML = counter;
   });
 }

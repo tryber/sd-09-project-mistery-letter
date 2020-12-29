@@ -12,20 +12,24 @@ function createMensage() {
   let mensage = inputMensage.value;
   let mensageClear = '';
   removeMensage();
-  for (let index = 0; index < mensage.length; index += 1) {
-    if (mensage[index] !== ' ') {
-      mensageClear += mensage[index];
-    } else {
-      const mensageSpan = document.createElement('span');
-      mensageSpan.innerText = `${mensageClear} `;
-      father.appendChild(mensageSpan);
-      mensageClear = '';
+  if (inputMensage.value !== '') {
+    for (let index = 0; index < mensage.length; index += 1) {
+      if (mensage[index] !== ' ') {
+        mensageClear += mensage[index];
+      } else {
+        const mensageSpan = document.createElement('span');
+        mensageSpan.innerText = `${mensageClear}`;
+        father.appendChild(mensageSpan);
+        mensageClear = '';
 
+      }
     }
+    const mensageSpan = document.createElement('span');
+    mensageSpan.innerText = `${mensageClear}`;
+    father.appendChild(mensageSpan);
+  } else {
+    alert('Por favor, digite o conteúdo da carta.')
   }
-  const mensageSpan = document.createElement('span');
-  mensageSpan.innerText = `${mensageClear} `;
-  father.appendChild(mensageSpan);
 }
 
 const buttonCreate = document.querySelector('#criar-carta');

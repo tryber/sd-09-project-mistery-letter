@@ -1,4 +1,4 @@
-input, button {
+input , button {
   display: inline-block;
 }
 
@@ -8,8 +8,8 @@ span {
 
 .newspaper {
   background-color: antiquewhite;
-  font-family: "Times New Roman", sans-serif;
-  font-weight: bold;
+  font-family: Times New Roman, sans-serif;
+  font-weight: 700;
 }
 
 .magazine1 {

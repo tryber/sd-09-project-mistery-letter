@@ -9,10 +9,10 @@ function removeMensage() {
 function createMensage() {
   const father = document.querySelector('#carta-gerada');
   const inputMensage = document.querySelector('#carta-texto');
-  let mensage = inputMensage.value;
+  let mensage = inputMensage.value.trim();
   let mensageClear = '';
   removeMensage();
-  if (inputMensage.value !== '') {
+  if (mensage !== '') {
     for (let index = 0; index < mensage.length; index += 1) {
       if (mensage[index] !== ' ') {
         mensageClear += mensage[index];

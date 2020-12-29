@@ -13,7 +13,7 @@
 }
 
 .magazine2 {
-    background-image: 'images/pink-pattern.png';
+    background-image: url('images/pink-pattern.png');
     color: fuchsia;
     font-family: Verdana;
     font-weight: 900;

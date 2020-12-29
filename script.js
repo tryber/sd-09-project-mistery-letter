@@ -3,15 +3,15 @@ const button = document.querySelector('#criar-carta');
 const paragraph = document.querySelector('#carta-gerada');
 const contador = document.querySelector('#carta-contador');
 
-// function two(randomTwo) {
-//   const twoRandom = Math.ceil(Math.random() * 2);
-//   return randomTwo[twoRandom];
-// }
+function two(randomTwo) {
+  const twoRandom = Math.ceil(Math.random() * 2);
+  return randomTwo[twoRandom];
+}
 
-// function three(randomThree) {
-//   const threeRandom = Math.ceil(Math.random() * 3);
-//   return randomThree[threeRandom];
-// }
+function three(randomThree) {
+  const threeRandom = Math.ceil(Math.random() * 3);
+  return randomThree[threeRandom];
+}
 
 function allClasses(classes) {
   const backGround = {
@@ -32,11 +32,13 @@ function allClasses(classes) {
     1: 'skewleft',
     2: 'skewright',
   };
-  // let randomBackGround = Math.ceil(Math.random() * 3);
-  // let randomSize = Math.ceil(Math.random() * 3);
-  // let randomRotation = Math.ceil(Math.random() * 2);
-  // let randomInclination = Math.ceil(Math.random() * 2);
-  classes.className += `${backGround} ${size} ${rotation} ${inclination}`;
+  let randomBackGround = Math.ceil(Math.random() * 3);
+  let randomSize = Math.ceil(Math.random() * 3);
+  let randomRotation = Math.ceil(Math.random() * 2);
+  let randomInclination = Math.ceil(Math.random() * 2);
+  classes.className += `${size[randomSize]} ${rotation[randomRotation]}`
+  classes.className += ` ${backGround[randomBackGround]} ${size[randomSize]} ${rotation[randomRotation]} ${inclination[randomInclination]}`;
+  classes.className += ` ${backGround[randomBackGround]} ${size[randomSize]} ${rotation[randomRotation]} ${inclination[randomInclination]}`;
 }
 
 function errorMessage() {

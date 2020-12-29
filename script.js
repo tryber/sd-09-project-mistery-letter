@@ -11,6 +11,7 @@ function createMensage() {
   const inputMensage = document.querySelector('#carta-texto');
   let mensage = inputMensage.value.trim();
   let mensageClear = '';
+  father.innerText = '';
   removeMensage();
   if (mensage !== '') {
     for (let index = 0; index < mensage.length; index += 1) {
@@ -28,7 +29,7 @@ function createMensage() {
     mensageSpan.innerText = `${mensageClear}`;
     father.appendChild(mensageSpan);
   } else {
-    alert('Por favor, digite o conteúdo da carta.')
+    father.innerText = 'Por favor, digite o conteúdo da carta.';
   }
 }
 

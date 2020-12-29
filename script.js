@@ -12,9 +12,22 @@ function createLetter() {
       count.innerText = listWords.length;
       const span = document.createElement('span');
       span.innerText = listWords[index];
+      span.className = createStyleWord();
       paragraph.appendChild(span);
     }
   }
+}
+
+function createStyleWord() {
+  const style = ['newspaper', 'magazine1', 'magazine2'];
+  const size = ['meduim', 'big', 'reallybig'];
+  const rotation = ['rotateleft', 'rotateright'];
+  const inclination = ['skewleft', 'skewright'];
+  let result = `${style[Math.floor(Math.random() * 3)]}`;
+  result += ` ${size[Math.floor(Math.random() * 3)]}`;
+  result += ` ${rotation[Math.floor(Math.random() * 2)]}`;
+  result += ` ${inclination[Math.floor(Math.random() * 2)]}`;
+  return result;
 }
 
 window.onload = function () {

@@ -2,7 +2,6 @@ const input = document.querySelector('#carta-texto');
 const button = document.querySelector('#criar-carta');
 const paragraph = document.querySelector('#carta-gerada');
 const contador = document.querySelector('#carta-contador');
-const tagSpan = document.getElementsByClassName('.text');
 
 function two(randomTwo) {
   const twoRandom = Math.ceil(Math.random() * 2);
@@ -20,23 +19,24 @@ function allClasses(classes) {
     2: 'magazine1',
     3: 'magazine2',
   };
-  
   const size = {
     1: 'medium',
     2: 'big',
     3: 'reallybig',
-  };
-  
+  };  
   const rotation = {
     1: 'rotateleft',
     2: 'rotateright',
   };
-  
   const inclination = {
     1: 'skewleft',
     2: 'skewright',
   };
-  classes.className += ` ${three(backGround)} ${three(size)} ${two(rotation)} ${two(inclination)}`; 
+  let randomBackGround = Math.ceil(Math.random() * 3);
+  let randomSize = Math.ceil(Math.random() * 3)
+  let randomRotation = Math.ceil(Math.random() * 2)
+  let randomInclination = Math.ceil(Math.random() * 2)
+  classes.className += `${backGround[randomBackGround]} ${size[randomSize]} ${rotation[randomRotation]} ${inclination[randomInclination]}`; 
 }
 
 function errorMessage() {
@@ -66,7 +66,7 @@ function getWord() {
       for (let index = 0; index < wordsArray.length; index += 1) {
         const span = document.createElement('span');
         span.innerHTML = wordsArray[index];
-        span.className = 'text';
+        span.className = 'text ';
         allClasses(span);
         paragraph.appendChild(span);
       }

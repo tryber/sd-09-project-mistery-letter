@@ -1,4 +1,4 @@
-/*function createStyleWord() {
+function createStyleWord() {
   const style = ['newspaper', 'magazine1', 'magazine2'];
   const size = ['meduim', 'big', 'reallybig'];
   const rotation = ['rotateleft', 'rotateright'];
@@ -9,8 +9,8 @@
   result += ` ${inclination[Math.floor(Math.random() * 2)]}`;
   return result;
 }
-*/
 
+/*
 function createStyleWord() {
   const style = ['newspaper',
   'magazine1',
@@ -24,6 +24,7 @@ function createStyleWord() {
   'skewright']
   return style;  
 }
+*/
 
 function createLetter() {
   const text = document.querySelector('#carta-texto');
@@ -39,10 +40,12 @@ function createLetter() {
       count.innerText = listWords.length;
       const span = document.createElement('span');
       span.innerText = listWords[index];
-      const listClass = createStyleWord();
+      span.className = createStyleWord();
+      /*
       for (let item = 0; item < listClass.length; item += 1) {
         span.classList.add(listClass[item]);
       }
+      */
       paragraph.appendChild(span);
     }
   }

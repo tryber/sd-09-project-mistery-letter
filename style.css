@@ -20,8 +20,8 @@ h1 {
 
 .main-content {
   margin: auto;
-  padding: 35px;
   max-width: 100%;
+  padding: 35px;
   text-align: center;
 }
 
@@ -33,7 +33,7 @@ h1 {
   max-width: 80%;
   text-align: start;
   word-wrap: break-word;
-} 
+}
 
 .carta-gerada {
   padding: 40px;
@@ -47,18 +47,18 @@ h1 {
 }
 
 .criar-carta {
-  background-color: rgb(188, 187, 189);
+  background-color: rgb(188 , 187 , 189);
   border-radius: 3px;
   padding: 4px 10px;
 }
 
 .criar-carta:hover {
-  background-color: rgba(188, 187, 189, 0.377);
+  background-color: rgba(188 , 187 , 189 , 0.377);
 }
 
 span {
-  margin: 3px;
   line-height: 60px;
+  margin: 3px;
 }
 
 .newspaper {

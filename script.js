@@ -9,10 +9,10 @@ function two(random) {
 }
 
 function allClasses(classes) {
-  const style = ['newspaper' , 'magazine1' , 'magazine2'];
-  const size = ['medium' , 'big' , 'reallybig'];
-  const rotation = ['rotateleft' , 'rotateright'];
-  const inclination = ['skewleft' , 'skewright'];
+  const style = ['newspaper', 'magazine1', 'magazine2'];
+  const size = ['medium', 'big', 'reallybig'];
+  const rotation = ['rotateleft', 'rotateright'];
+  const inclination = ['skewleft', 'skewright'];
   classes.className = `${three(style)} ${three(size)} ${two(rotation)} ${two(inclination)}`;
 }
 
@@ -55,15 +55,15 @@ function wordCounter() {
   const button = document.querySelector('#criar-carta');
   button.addEventListener('click', function () {
     const numberOfWords = document.querySelector('#carta-gerada');
-    contador.innerHTML = `Total de palavras na carta: ${numberOfWords.childElementCount}`;
+    contador.innerHTML = numberOfWords.childElementCount;
   });
 }
 wordCounter();
 
 function changeStyle() {
   const paragraph = document.querySelector('#carta-gerada');
-  paragraph.addEventListener('click', function(event) {
-    if(event.target.className.includes('carta-gerada')) {
+  paragraph.addEventListener('click', function (event) {
+    if (event.target.className.includes('carta-gerada')) {
       allClasses(false);
     } else {
       allClasses(event.target);

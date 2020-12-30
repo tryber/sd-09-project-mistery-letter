@@ -1,4 +1,14 @@
 function createStyleWord() {
+  const styleClass = ['newspaper',
+  'magazine1',
+  'magazine2',
+  'medium',
+  'big',
+  'reallybig',
+  'rotateleft',
+  'rotateright',
+  'skewleft',
+  'skewright'];
   const style = ['newspaper', 'magazine1', 'magazine2'];
   const size = ['meduim', 'big', 'reallybig'];
   const rotation = ['rotateleft', 'rotateright'];
@@ -9,22 +19,6 @@ function createStyleWord() {
   result += ` ${inclination[Math.floor(Math.random() * 2)]}`;
   return result;
 }
-
-/*
-function createStyleWord() {
-  const style = ['newspaper',
-  'magazine1',
-  'magazine2',
-  'medium',
-  'big',
-  'reallybig',
-  'rotateleft',
-  'rotateright',
-  'skewleft',
-  'skewright']
-  return style;  
-}
-*/
 
 function createLetter() {
   const text = document.querySelector('#carta-texto');
@@ -41,11 +35,6 @@ function createLetter() {
       const span = document.createElement('span');
       span.innerText = listWords[index];
       span.className = createStyleWord();
-      /*
-      for (let item = 0; item < listClass.length; item += 1) {
-        span.classList.add(listClass[item]);
-      }
-      */
       paragraph.appendChild(span);
     }
   }

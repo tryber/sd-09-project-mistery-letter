@@ -1,22 +1,18 @@
 function createStyleWord() {
-  const styleClass = ['newspaper',
-  'magazine1',
-  'magazine2',
-  'medium',
-  'big',
-  'reallybig',
-  'rotateleft',
-  'rotateright',
-  'skewleft',
-  'skewright'];
-  const style = ['newspaper', 'magazine1', 'magazine2'];
-  const size = ['meduim', 'big', 'reallybig'];
-  const rotation = ['rotateleft', 'rotateright'];
-  const inclination = ['skewleft', 'skewright'];
-  let result = `${style[Math.floor(Math.random() * 3)]}`;
-  result += ` ${size[Math.floor(Math.random() * 3)]}`;
-  result += ` ${rotation[Math.floor(Math.random() * 2)]}`;
-  result += ` ${inclination[Math.floor(Math.random() * 2)]}`;
+  const styleClass1 = ['newspaper', 'magazine1', 'magazine2', 'medium', 'big', 'reallybig',
+    'rotateleft', 'rotateright', 'skewleft', 'skewright'];
+  const styleClass2 = ['magazine1', 'newspaper', 'magazine2', 'medium', 'reallybig', 'big',
+    'rotateright', 'rotateleft', 'skewright', 'skewleft'];
+  const styleClass3 = ['magazine2', 'newspaper', 'magazine1', 'reallybig', 'big', 'medium',
+    'rotateright', 'rotateleft', 'skewright', 'skewleft'];
+  const sort = Math.floor(Math.random() * 3);
+  if (sort === 0) {
+    result = styleClass1;
+  } else if (sort === 1) {
+    result = styleClass2;
+  } else {
+    result = styleClass3;
+  }
   return result;
 }
 
@@ -34,7 +30,10 @@ function createLetter() {
       count.innerText = listWords.length;
       const span = document.createElement('span');
       span.innerText = listWords[index];
-      span.className = createStyleWord();
+      const listStyle = createStyleWord();
+      for (let item = 0; item < listStyle.length; item += 1) {
+        span.classList.add(listStyle[item]);
+      }
       paragraph.appendChild(span);
     }
   }

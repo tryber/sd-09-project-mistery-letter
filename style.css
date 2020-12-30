@@ -1,0 +1,117 @@
+/* Cores fonte e weight */
+
+/* Requisito 6 */
+.newspaper {
+  background-color: antiquewhite;
+  font-family: Times New Roman, Times, serif;
+  font-weight: 700;
+}
+
+/* Requisito 7 */
+.magazine1 {
+  background-color: teal;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+/* Requisito 8 */
+.magazine2 {
+  background-image: url('./images/pink-pattern.png');
+  color: fuchsia;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 900;
+}
+
+/* Tamanho e espaçamento */
+
+/* Requisito 9 */
+.medium {
+  font-size: 20px;
+  padding: 8px;
+}
+
+/* Requisito 10 */
+.big {
+  font-size: 30px;
+  padding: 10px;
+}
+
+/* Requisito 11 */
+.reallybig {
+  font-size: 40px;
+  padding: 15px;
+}
+
+/* Rotacao */
+
+/* Requisito 12 */
+.rotateleft {
+  transform: rotate(-5deg);
+}
+
+/* Requisito 13 */
+.rotateright {
+  transform: rotate(5deg);
+}
+
+/* Inclinacao */
+
+/* Requisito 14 */
+.skewleft {
+  transform: skewX(10deg);
+}
+
+/* Requisito 15 */
+.skewright {
+  transform: skewX(-10deg);
+}
+
+.inputHolder {
+  margin: 20px auto 50px;
+  text-align: center;
+}
+
+.inputHolder input {
+  font-size: 1.2em;
+  text-align: center;
+  width: 800px;
+}
+
+.inputHolder button {
+  border-radius: 50px;
+  font-size: 1.2em;
+  margin-left: 20px;
+}
+
+span {
+  display: inline-block;
+}
+
+body {
+  background-color: rgb(162 , 210 , 255);
+  background-image: url('./images/background.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.paragraphHolder {
+  margin: auto;
+  text-align: center;
+  width: 75%;
+}
+
+.paragraphHolder span {
+  margin-top: 12px;
+}
+
+.paragraphHolder p {
+  margin-left: 80px;
+}
+
+.extraStuff {
+  font-size: 20px;
+  margin-top: 200px;
+  text-align: center;
+}

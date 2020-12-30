@@ -1,0 +1,99 @@
+body {
+  background-color: rgb(199, 196, 168);
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-image: url('https://cdn.pixabay.com/photo/2014/10/25/15/55/newspaper-502778_1280.jpg');
+  background-size: cover;
+  padding: 10px;
+}
+
+h1 {
+  color: white;
+  font-size: 40px;
+  text-align: center;
+  text-shadow: 5px 5px 5px black;
+}
+
+.main-content {
+  height: auto;
+  margin: auto;
+  padding: 35px;
+  max-width: 100%;
+  text-align: center;
+}
+
+.carta-pronta {
+  background-color: rgb(247, 251, 255);
+  border: 8px ridge rgb(75, 74, 74);
+  height: auto;
+  margin: auto;
+  max-width: 70%;
+}
+
+.carta-gerada {
+  padding: 40px;
+}
+
+.carta-texto {
+  width: 40%;
+}
+
+span {
+  margin: 3px;
+  line-height: 60px;
+}
+
+.newspaper {
+  background-color: antiquewhite;
+  font-family: Times New Roman, Times, serif;
+  font-weight: 700;
+}
+
+.magazine1 {
+  background-color: teal;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.magazine2 {
+  background-image: url('/images/pink-pattern.png');
+  color: fuchsia;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 900;
+}
+
+.medium {
+  font-size: 20px;
+  padding: 8px;
+}
+
+.big {
+  font-size: 30px;
+  padding: 10px;
+}
+
+.reallybig {
+  font-size: 40px;
+  padding: 15px;
+}
+
+.rotateleft {
+  transform: rotate(-5deg);
+}
+
+.rotateright {
+  transform: rotate(5deg);
+}
+
+.skewleft {
+  transform: skewX(10deg);
+}
+
+.skewright {
+  transform: skewX(-10deg);
+}

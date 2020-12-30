@@ -1,5 +1,45 @@
+body {
+  background-image: url('images/background.jpg');
+  background-size: cover;
+  font-family: monospace;
+ }
+
+button {
+  background-color: white;
+  border: none;
+  border-radius: 10px;
+  color: black;
+  font-weight: 600;
+  margin: 5px;
+  padding: 5px 10px;
+  transition: 0.5s;
+}
+
+button:focus {
+  outline: transparent;
+}
+
+button:hover {
+  padding: 5px 20px;
+}
+
+input {
+  background-color: white;
+  border: 0.1em solid gray;
+  border-radius: 3px;
+  padding: 3px;
+}
+
 main {
+  font-size: 1.3em;
+  margin: 30px auto;
+  padding-top: 30px;
   text-align: center;
+  width: 80%;
+}
+
+span {
+  display: inline-block;;
 }
 
 .big {
@@ -8,7 +48,7 @@ main {
 }
 
 .container {
-  display: inline-block;
+  margin: 50px;
 }
 
 .magazine1 {

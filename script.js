@@ -1,4 +1,5 @@
 function createStyleWord() {
+  const result;
   const styleClass1 = ['newspaper', 'magazine1', 'magazine2', 'medium', 'big', 'reallybig',
     'rotateleft', 'rotateright', 'skewleft', 'skewright'];
   const styleClass2 = ['magazine1', 'newspaper', 'magazine2', 'medium', 'reallybig', 'big',
@@ -16,6 +17,13 @@ function createStyleWord() {
   return result;
 }
 
+function insertClass(span) {
+  const listStyle = createStyleWord();
+  for (let item = 0; item < listStyle.length; item += 1) {
+    span.classList.add(listStyle[item]);
+  }
+}
+
 function createLetter() {
   const text = document.querySelector('#carta-texto');
   const listWords = text.value.split(' ');
@@ -30,10 +38,7 @@ function createLetter() {
       count.innerText = listWords.length;
       const span = document.createElement('span');
       span.innerText = listWords[index];
-      const listStyle = createStyleWord();
-      for (let item = 0; item < listStyle.length; item += 1) {
-        span.classList.add(listStyle[item]);
-      }
+      insertClass(span);
       paragraph.appendChild(span);
     }
   }

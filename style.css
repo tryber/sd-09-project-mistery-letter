@@ -91,7 +91,7 @@ span {
 
 body {
   background-color: rgb(162 , 210 , 255);
-  background-image: url('/images/background.jpg');
+  background-image: url('./images/background.jpg');
   background-repeat: no-repeat;
   background-size: 100%;
 }

@@ -1,18 +1,18 @@
 function three(random) {
-  let randomThree = Math.floor(Math.random() * 3);
+  const randomThree = Math.floor(Math.random() * 3);
   return random[randomThree];
 }
 
 function two(random) {
-  let randomTwo = Math.floor(Math.random() * 2);
+  const randomTwo = Math.floor(Math.random() * 2);
   return random[randomTwo];
 }
 
 function allClasses(classes) {
-  const style = ['newspaper', 'magazine1', 'magazine2',];
-  const size = ['medium', 'big', 'reallybig',];
-  const rotation = ['rotateleft', 'rotateright',];
-  const inclination = ['skewleft', 'skewright',]
+  const style = ['newspaper' , 'magazine1' , 'magazine2'];
+  const size = ['medium' , 'big' , 'reallybig'];
+  const rotation = ['rotateleft' , 'rotateright'];
+  const inclination = ['skewleft' , 'skewright'];
   classes.className = `${three(style)} ${three(size)} ${two(rotation)} ${two(inclination)}`;
 }
 
@@ -44,7 +44,7 @@ function errorMessage() {
     if (inputContent.match(/^\s*$/)) { // Nada ou espaço vazio
       paragraph.innerHTML = 'Por favor, digite o conteúdo da carta.';
     } else {
-     getWord();
+      getWord();
     }
   });
 }
@@ -55,7 +55,19 @@ function wordCounter() {
   const button = document.querySelector('#criar-carta');
   button.addEventListener('click', function () {
     const numberOfWords = document.querySelector('#carta-gerada');
-    contador.innerHTML = numberOfWords.childElementCount;
+    contador.innerHTML = `Total de palavras na carta: ${numberOfWords.childElementCount}`;
   });
 }
 wordCounter();
+
+function changeStyle() {
+  const paragraph = document.querySelector('#carta-gerada');
+  paragraph.addEventListener('click', function(event) {
+    if(event.target.className.includes('carta-gerada')) {
+      allClasses(false);
+    } else {
+      allClasses(event.target);
+    }
+  });
+}
+changeStyle();

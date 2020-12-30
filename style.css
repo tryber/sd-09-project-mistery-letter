@@ -2,7 +2,7 @@ body {
   background-image: url('images/background.jpg');
   background-size: cover;
   font-family: monospace;
- }
+}
 
 button {
   background-color: white;
@@ -39,7 +39,7 @@ main {
 }
 
 span {
-  display: inline-block;;
+  display: inline-block;
 }
 
 .big {

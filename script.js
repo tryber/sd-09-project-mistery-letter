@@ -32,9 +32,8 @@ function createSpan(mensageClear) {
   randomClass(mensageSpan, skewClass);
 }
 
-//Referencia: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/trim
-
-//Referencia: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split
+// Referencia: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/trim
+// Referencia: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split
 
 function createMensage() {
   const mensage = inputMensage.value.split(' ');

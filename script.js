@@ -15,6 +15,8 @@ function createLetter() {
 function testInput() {
   if (input.value === '' || input.value[0] === ' ') {
     window.alert('Por favor, digite o conteúdo da carta.');
+  } else {
+    createLetter();
   }
 }
 

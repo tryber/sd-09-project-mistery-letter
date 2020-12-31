@@ -1,0 +1,13 @@
+.makeContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.letterContainer{
+  display: flex;
+  justify-content: center;
+}
+
+span {
+  margin: 5px;
+}

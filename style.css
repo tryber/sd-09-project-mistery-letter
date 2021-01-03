@@ -1,0 +1,101 @@
+body {
+  background-image: url('images/background.jpg');
+  background-size: cover;
+}
+
+button {
+  background-color: white;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px black;
+  color: black;
+  font-weight: 600;
+  margin: 5px;
+  padding: 5px 10px;
+  transition: 0.5s;
+}
+
+button:focus {
+  outline: transparent;
+}
+
+button:hover {
+  box-shadow: 0 2px 5px white;
+  padding: 5px 15px;
+}
+
+input {
+  background-color: white;
+  border: 0.1em solid gray;
+  border-radius: 3px;
+  box-shadow: 2px 2px 5px black;
+  padding: 3px;
+}
+
+main {
+  font-family: monospace;
+  font-size: 1.3em;
+  margin: 60px auto;
+  text-align: center;
+  width: 80%;
+}
+
+span {
+  display: inline-block;
+}
+
+.big {
+  font-size: 30px;
+  padding: 10px;
+}
+
+.container {
+  margin: 50px;
+}
+
+.magazine1 {
+  background-color: teal;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.magazine2 {
+  background-image: url('images/pink-pattern.png');
+  color: fuchsia;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 900;
+}
+
+.medium {
+  font-size: 20px;
+  padding: 8px;
+}
+
+.newspaper {
+  background-color: antiquewhite;
+  font-family: Times New Roman, Times, serif;
+  font-weight: 700;
+}
+
+.reallybig {
+  font-size: 40px;
+  padding: 15px;
+}
+
+.rotateleft {
+  transform: rotate(-5deg);
+}
+
+.rotateright {
+  transform: rotate(5deg);
+}
+
+.skewleft {
+  transform: skewX(10deg);
+}
+
+.skewright {
+  transform: skewX(-10deg);
+}

@@ -1,0 +1,14 @@
+body {
+  max-width: 1366px;
+  margin: 0 auto;
+  background-color: rgb(253, 252, 220);
+  color: rgb(240, 113, 103);
+}
+
+header {
+  background-color: rgb(0, 129, 167);
+  color: rgb(254, 217, 183);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

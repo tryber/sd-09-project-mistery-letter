@@ -3,7 +3,7 @@
   justify-content: center;
 }
 
-.letterContainer{
+.letterContainer {
   display: flex;
   justify-content: center;
 }
@@ -62,4 +62,8 @@ span {
 
 .skewright {
   transform: skewX(-10deg);
+}
+
+.contador {
+  margin-left: 10px;
 }

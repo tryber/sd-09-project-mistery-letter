@@ -1,13 +1,13 @@
 body {
   background-image: url('images/background.jpg');
   background-size: cover;
-  font-family: monospace;
 }
 
 button {
   background-color: white;
   border: none;
   border-radius: 10px;
+  box-shadow: 2px 2px 5px black;
   color: black;
   font-weight: 600;
   margin: 5px;
@@ -20,17 +20,20 @@ button:focus {
 }
 
 button:hover {
-  padding: 5px 20px;
+  box-shadow: 0 2px 5px white;
+  padding: 5px 15px;
 }
 
 input {
   background-color: white;
   border: 0.1em solid gray;
   border-radius: 3px;
+  box-shadow: 2px 2px 5px black;
   padding: 3px;
 }
 
 main {
+  font-family: monospace;
   font-size: 1.3em;
   margin: 60px auto;
   text-align: center;

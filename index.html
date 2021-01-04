@@ -7,16 +7,19 @@
   <title>Mistery Letter</title>
 </head>
 <body>
+  <header>
+    <h1>Carta Misteriosa</h1>
+  </header>
   <div class="container">
-    <header>
-      <h1>Carta Misteriosa</h1>
-    </header>
-    <div class="input-container">
-      <label for="text">Digite a carta</label>
-      <input type="text" id="carta-texto">
+    <div class="form">
+      <label for="carta-texto" class="form-label">Escreva o texto</label>
+      <div class="form-div">
+        <input type="text" id="carta-texto" class="form-input">
+        <button id="criar-carta" class="form-button">Gerar Carta</button>
+      </div>
     </div>
     <div class="letter-container">
-      <p class="carta-gerada">Hello world</p>
+      <p id="carta-gerada"></p>
     </div>
   </div>
   <script src="script.js"></script>

@@ -60,3 +60,9 @@ input {
   position: relative;
   width: 60%;
 }
+
+.newspaper {
+  background-color: antiquewhite;
+  font-family: Times New Roman, serif;
+  font-weight: bold;
+}

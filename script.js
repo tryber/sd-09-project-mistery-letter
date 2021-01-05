@@ -14,6 +14,7 @@ function destroyLetter() {
 }
 
 function wordArt(word) {
+  word.className = '';
   word.classList.add(style[Math.ceil(Math.random() * style.length) - 1]);
   word.classList.add(size[Math.ceil(Math.random() * size.length) - 1]);
   word.classList.add(rotation[Math.ceil(Math.random() * rotation.length) - 1]);
@@ -37,3 +38,9 @@ function createLetter() {
 }
 
 createBtn.addEventListener('click', createLetter);
+
+function wordUpdate(event) {
+  wordArt(event.target);
+}
+
+letter.addEventListener('click', wordUpdate);

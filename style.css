@@ -99,16 +99,20 @@ input {
 
 .rotateleft {
   transform: rotate(-5deg);
+  display: inline-block;
 }
 
 .rotateright {
   transform: rotate(5deg);
+  display: inline-block;
 }
 
 .skewleft {
   transform: skewX(10deg);
+  display: inline-block;
 }
 
 .skewright {
   transform: skewX(-10deg);
+  display: inline-block;
 }

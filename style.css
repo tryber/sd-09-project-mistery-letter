@@ -54,9 +54,9 @@ label {
 }
 
 input {
-  height: 30px;
   font-size: 20px;
   font-family: Rock Salt, cursive;
+  height: 30px;
   position: relative;
   width: 60%;
 }

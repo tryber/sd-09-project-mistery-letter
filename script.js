@@ -13,9 +13,7 @@ function createLetter() {
   const helper = message.value.replace(/\s/g, '');
   destroyLetter();
   if (text === '' || helper === '') {
-    const span = document.createElement('span');
-    span.innerText = 'Por favor, digite o conteúdo da carta';
-    letter.appendChild(span);
+    letter.innerText = 'Por favor, digite o conteúdo da carta';
     return;
   }
   for (let index = 0; index < text.length; index += 1) {

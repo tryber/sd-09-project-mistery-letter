@@ -3,17 +3,17 @@ const createBtn = document.getElementById('criar-carta');
 const letter = document.getElementById('carta-gerada');
 
 function destroyLetter() {
+  letter.innerText = '';
   while (letter.children.length > 0) {
     letter.removeChild(letter.children[letter.children.length - 1]);
   }
 }
 
 function createLetter() {
-  const text = message.value.split(' ');
-  const helper = message.value.replace(/\s/g, '');
+  const text = message.value.replace(/\s/g, '');
   destroyLetter();
-  if (text === '' || helper === '') {
-    letter.innerText = 'Por favor, digite o conteúdo da carta';
+  if (text === '') {
+    letter.innerText = 'Por favor, digite o conteúdo da carta.';
     return;
   }
   for (let index = 0; index < text.length; index += 1) {

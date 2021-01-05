@@ -24,7 +24,7 @@ function wordArt(word) {
 }
 
 function counter() {
-  wordCount.innerText = `Quantidade de Palavras: ${letter.children.length}`;
+  wordCount.innerText = letter.children.length;
 }
 
 function createLetter() {

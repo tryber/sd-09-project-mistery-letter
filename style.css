@@ -46,7 +46,7 @@ header p {
   text-shadow: 1.5px 1.5px black;
 }
 
-label {
+.dancing {
   color: silver;
   font-family: Dancing Script, cursive;
   font-size: 35px;
@@ -98,21 +98,21 @@ input {
 }
 
 .rotateleft {
-  transform: rotate(-5deg);
   display: inline-block;
+  transform: rotate(-5deg);
 }
 
 .rotateright {
-  transform: rotate(5deg);
   display: inline-block;
+  transform: rotate(5deg);
 }
 
 .skewleft {
-  transform: skewX(10deg);
   display: inline-block;
+  transform: skewX(10deg);
 }
 
 .skewright {
-  transform: skewX(-10deg);
   display: inline-block;
+  transform: skewX(-10deg);
 }

@@ -1,6 +1,7 @@
 const message = document.getElementById('carta-texto');
 const createBtn = document.getElementById('criar-carta');
 const letter = document.getElementById('carta-gerada');
+const wordCount = document.getElementById('carta-contador');
 const style = ['newspaper', 'magazine1', 'magazine2'];
 const size = ['medium', 'big', 'reallybig'];
 const rotation = ['rotateleft', 'rotateleft'];
@@ -11,6 +12,7 @@ function destroyLetter() {
   while (letter.children.length > 0) {
     letter.removeChild(letter.children[letter.children.length - 1]);
   }
+  wordCount.innerText = '';
 }
 
 function wordArt(word) {
@@ -19,6 +21,10 @@ function wordArt(word) {
   word.classList.add(size[Math.ceil(Math.random() * size.length) - 1]);
   word.classList.add(rotation[Math.ceil(Math.random() * rotation.length) - 1]);
   word.classList.add(inclination[Math.ceil(Math.random() * inclination.length) - 1]);
+}
+
+function counter() {
+  wordCount.innerText = `Quantidade de Palavras: ${letter.children.length}`;
 }
 
 function createLetter() {
@@ -35,6 +41,7 @@ function createLetter() {
     wordArt(span);
     letter.appendChild(span);
   }
+  counter();
 }
 
 createBtn.addEventListener('click', createLetter);

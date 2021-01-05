@@ -76,8 +76,13 @@ input {
 }
 
 .magazine2 {
-  background-image: URL(assets/images/pink-pattern.png);
+  background-image: url("assets/images/pink-pattern.png");
   color: fuchsia;
   font-family: Verdana, sans-serif;
   font-weight: 900;
+}
+
+.medium {
+  font-size: 20px;
+  padding: 8px;
 }

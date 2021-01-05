@@ -35,7 +35,7 @@ header {
   z-index: 10;
 }
 
-p {
+header p {
   bottom: 30%;
   color: rgb(108 , 200 , 202);
   display: inline-block;

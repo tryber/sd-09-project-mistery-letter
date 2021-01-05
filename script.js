@@ -1,12 +1,23 @@
 const message = document.getElementById('carta-texto');
 const createBtn = document.getElementById('criar-carta');
 const letter = document.getElementById('carta-gerada');
+const style = ['newspaper', 'magazine1', 'magazine2'];
+const size = ['medium', 'big', 'reallybig'];
+const rotation = ['rotateleft', 'rotateleft'];
+const inclination = ['skewleft', 'skewright'];
 
 function destroyLetter() {
   letter.innerText = '';
   while (letter.children.length > 0) {
     letter.removeChild(letter.children[letter.children.length - 1]);
   }
+}
+
+function wordArt(word) {
+  word.classList.add(style[Math.ceil(Math.random() * style.length) - 1]);
+  word.classList.add(size[Math.ceil(Math.random() * size.length) - 1]);
+  word.classList.add(rotation[Math.ceil(Math.random() * rotation.length) - 1]);
+  word.classList.add(inclination[Math.ceil(Math.random() * inclination.length) - 1]);
 }
 
 function createLetter() {
@@ -20,6 +31,7 @@ function createLetter() {
   for (let index = 0; index < helper.length; index += 1) {
     const span = document.createElement('span');
     span.innerText = helper[index];
+    wordArt(span);
     letter.appendChild(span);
   }
 }

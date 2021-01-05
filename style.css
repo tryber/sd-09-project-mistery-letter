@@ -1,3 +1,62 @@
 body {
   background-color: antiquewhite;
 }
+
+main {
+  background-color: rgb(82 , 183 , 202);
+  border: 1px solid black;
+  border-radius: 15px;
+  box-shadow: 1px 1px black;
+  margin: auto;
+  padding: 1em;
+  position: relative;
+  text-align: center;
+  top: 3.3em;
+  width: 70%;
+}
+
+.logo {
+  height: 50px;
+  position: relative;
+}
+
+header {
+  background-color: rgb(82 , 183 , 136);
+  border-bottom: 2px solid black;
+  display: inline-block;
+  font-family: Texturina, serif;
+  font-weight: 600;
+  height: 50px;
+  position: absolute;
+  right: 0;
+  text-align: left;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+p {
+  bottom: 30%;
+  color: rgb(108 , 200 , 202);
+  display: inline-block;
+  font-size: xx-large;
+  margin: auto 1%;
+  position: relative;
+  text-align: left;
+  text-shadow: 1.5px 1.5px black;
+}
+
+label {
+  color: silver;
+  font-family: Dancing Script, cursive;
+  font-size: 35px;
+  text-shadow: 1px 1px black;
+}
+
+input {
+  height: 30px;
+  font-size: 20px;
+  font-family: Rock Salt, cursive;
+  position: relative;
+  width: 60%;
+}

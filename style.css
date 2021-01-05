@@ -66,3 +66,11 @@ input {
   font-family: Times New Roman, serif;
   font-weight: 700;
 }
+
+.magazine1 {
+  background-color: teal;
+  color: white;
+  font-family: Verdana, sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+}

@@ -1,6 +1,3 @@
-/* * {
-  box-sizing: border-box;
-} */
 body {
   background-color: rgb(253, 252, 220);
   color: rgb(240, 113, 103);
@@ -36,7 +33,6 @@ header {
   box-shadow: 0 10px 25px gray;
 }
 
-
 .form-div {
   display: flex;
 }
@@ -59,7 +55,6 @@ header {
   font-size: 14px;
 }
 
-
 .form-button {
   display: block;
   outline: none;
@@ -78,16 +73,23 @@ header {
   background-color: rgba(0, 175, 185, 0.8);
 }
 
-.word {
-  padding-right: 10px;
+.letter-container {
+  margin-top: 40px;
+  color: rgb(38, 38, 38);
+  font-size: 16px;
+}
+
+.warning {
+  background-color: red;
+  color: antiquewhite;
+  font-size: 30px;
+  padding: 20px;
 }
 
 .newspaper {
   background-color: antiquewhite;
-  color: white;
-  font-family: Times New Roman, Times, serif;
-  font-weight: 900;
-  text-transform: uppercase;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
 }
 
 .magazine1 {
@@ -103,4 +105,35 @@ header {
   color: fuchsia;
   font-family: Verdana, Geneva, sans-serif;
   font-weight: 900;
+}
+
+.medium {
+  font-size: 20px;
+  padding: 8px;
+}
+
+.big {
+  font-size: 30px;
+  padding: 10px;
+}
+
+.reallybig {
+  font-size: 40px;
+  padding: 15px;
+}
+
+.rotateleft {
+  transform: rotate(-5deg);
+}
+
+.rotateright {
+  transform: rotate(5deg);
+}
+
+.skewleft {
+  transform: skewX(10deg);
+}
+
+.skewright {
+  transform: skewX(-10deg);
 }

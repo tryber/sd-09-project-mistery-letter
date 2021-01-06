@@ -1,3 +1,11 @@
+const classesGroup = ['skew', 'rotate', 'sizes', 'style']; 
+const classes = {
+  style: ['newspaper', 'magazine1', 'magazine2'],
+  sizes: ['medium', 'big', 'reallybig'],
+  rotate: ['rotateright', 'rotateleft'],
+  skew: ['skewleft', 'skewright']
+};
+
 const validateInput = function (text) {
   const finalText = text.trim();
   if (finalText.length == 0) {
@@ -13,15 +21,35 @@ const splitText = function (text) {
 
 const resetLetter = function () {
   const pElement = document.getElementById('carta-gerada');
-  console.log(pElement);
   const hasChilds = pElement.hasChildNodes();
   if (hasChilds) {
     const spanElements = document.querySelectorAll('span') ;
-    console.log(spanElements);
     for (let index = 0; index < spanElements.length; index += 1) {
       pElement.removeChild(spanElements[index]);
     }
   }
+};
+
+const ramdomClassesGroup = function () {
+  const chosenClassesGroup = [];
+  const firstIndex = Math.floor(Math.random() * 4);
+  let secondIndex;
+  chosenClassesGroup.push(classesGroup[firstIndex]);
+  do {
+    secondIndex = Math.floor(Math.random() * 4);
+  } while (firstIndex === secondIndex);
+  chosenClassesGroup.push(classesGroup[secondIndex]);
+  return chosenClassesGroup;
+};
+
+const ramdomClasses = function () {
+  const chosenClassesGroup = ramdomClassesGroup();
+  const chosenClasses = {};
+  const index1 = Math.floor(Math.random() * classes[chosenClassesGroup[0]].length);
+  const index2 = Math.floor(Math.random() * classes[chosenClassesGroup[1]].length);
+  chosenClasses.classe1 = classes[chosenClassesGroup[0]][index1];
+  chosenClasses.classe2 = classes[chosenClassesGroup[1]][index2];
+  return chosenClasses;
 };
 
 function handleClickButton() {
@@ -33,13 +61,15 @@ function handleClickButton() {
     const letter = splitText(inputText);
     for (let index = 0; index < letter.length; index += 1) {
       const spanElement = document.createElement('span');
-      spanElement.className = 'word';
+      const chosenClasses = ramdomClasses();
+      spanElement.classList.add(chosenClasses.classe1, chosenClasses.classe2);
       spanElement.innerText = letter[index];
       pElement.appendChild(spanElement);
     }
   } else {
     const spanElement = document.createElement('span');
     spanElement.innerText = 'Por favor, digite o conteúdo da carta.';
+    spanElement.className = 'warning';
     pElement.appendChild(spanElement);
   }
 }

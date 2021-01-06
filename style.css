@@ -97,3 +97,10 @@ header {
   font-weight: 900;
   text-transform: uppercase;
 }
+
+.magazine2 {
+  background-image: url(images/pink-pattern.png);
+  color: fuchsia;
+  font-family: Verdana, Geneva, sans-serif;
+  font-weight: 900;
+}

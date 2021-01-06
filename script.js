@@ -1,23 +1,25 @@
 // Gerar número aleatório
-function ramdomValue(maxNumber) {
+function randomValue(maxNumber) {
   return Math.floor(Math.random() * maxNumber);
 }
 
 // Gerar classes
-function ramdomClasses() {
-  const grupoEstilo = ['newspaper ', 'magazine1 ', 'magazine2 '];
-  const grupoTamanho = ['medium ', 'big ', 'reallybig '];
-  const grupoRotacao = ['rotateleft ', 'rotateright '];
+function randomClasses(element) {
+  const grupoEstilo = ['newspaper', 'magazine1', 'magazine2'];
+  const grupoTamanho = ['medium', 'big', 'reallybig'];
+  const grupoRotacao = ['rotateleft', 'rotateright'];
   const grupoInclinacao = ['skewleft', 'skewright'];
 
-  let classes = '';
+  element.classList = '';
+  element.classList.add(grupoEstilo[randomValue(grupoEstilo.length)]);
+  element.classList.add(grupoTamanho[randomValue(grupoTamanho.length)]);
+  element.classList.add(grupoRotacao[randomValue(grupoRotacao.length)]);
+  element.classList.add(grupoInclinacao[randomValue(grupoInclinacao.length)]);
 
-  classes += grupoEstilo[ramdomValue(grupoEstilo.length)];
-  classes += grupoTamanho[ramdomValue(grupoTamanho.length)];
-  classes += grupoRotacao[ramdomValue(grupoRotacao.length)];
-  classes += grupoInclinacao[ramdomValue(grupoInclinacao.length)];
-
-  return classes;
+  if (element.classList.contains('newspaper')) {
+    element.style.fontWeight = 'bold';
+    element.style.fontFamily = '"Times New Roman", serif';
+  }
 }
 
 // Adiciona ao HTML Quantidade de Letras
@@ -33,26 +35,33 @@ function includeQdtWords(length) {
 // Botão gerar carta misteriosa
 document.querySelector('#criar-carta').addEventListener('click', function () {
   const cartaTexto = document.getElementById('carta-texto').value;
+  const parent = document.getElementById('carta-gerada');
+  parent.innerHTML = null;
 
   if (cartaTexto.length > 0 && cartaTexto.indexOf(' ') > 0) {
     let cartaTextoSpan = cartaTexto.split(' ');
     const cartaTextoLength = cartaTextoSpan.length;
 
     for (let cont = 0; cont < cartaTextoLength; cont += 1) {
-      cartaTextoSpan[cont] = `<span class="${ramdomClasses()}">${cartaTextoSpan[cont]}</span>`;
+      const elementHTML = document.createElement('span');
+      const elementText = document.createTextNode(cartaTextoSpan[cont]);
+
+      elementHTML.appendChild(elementText);
+      randomClasses(elementHTML);
+
+      parent.appendChild(elementHTML);
     }
 
     cartaTextoSpan = cartaTextoSpan.join(' ');
 
-    document.querySelector('#carta-gerada').innerHTML = cartaTextoSpan;
     document.querySelector('#carta-texto').value = cartaTexto;
     includeQdtWords(cartaTextoLength);
   } else {
-    alert('por favor, digite o conteúdo da carta.');
+    document.querySelector('#carta-gerada').innerHTML = 'Por favor, digite o conteúdo da carta.';
   }
 });
 
 // Alterar estilo palavra
 document.querySelector('#carta-gerada').addEventListener('click', function (event) {
-  (event.target).className = ramdomClasses();
+  randomClasses(event.target);
 });

@@ -17,7 +17,6 @@ function randomClasses(element) {
   element.classList.add(grupoInclinacao[randomValue(grupoInclinacao.length)]);
 
   if (element.classList.contains('newspaper')) {
-    element.style.fontWeight = 'bold';
     element.style.fontFamily = '"Times New Roman", serif';
   }
 }

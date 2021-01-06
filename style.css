@@ -89,3 +89,11 @@ header {
   font-weight: 900;
   text-transform: uppercase;
 }
+
+.magazine1 {
+  background-color: teal;
+  color: white;
+  font-family: Verdana, Geneva, sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+}

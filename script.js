@@ -11,12 +11,24 @@ const splitText = function (text) {
   return letter;
 };
 
+const resetLetter = function () {
+  const pElement = document.getElementById('carta-gerada');
+  console.log(pElement);
+  const hasChilds = pElement.hasChildNodes();
+  if (hasChilds) {
+    const spanElements = document.querySelectorAll('span') ;
+    console.log(spanElements);
+    for (let index = 0; index < spanElements.length; index += 1) {
+      pElement.removeChild(spanElements[index]);
+    }
+  }
+};
+
 function handleClickButton() {
   const inputText = document.getElementById('carta-texto').value;
-  console.log(inputText);
   const pElement = document.getElementById('carta-gerada');
   const validInput = validateInput(inputText);
-  console.log(validInput);
+  resetLetter();
   if (validInput) {
     const letter = splitText(inputText);
     for (let index = 0; index < letter.length; index += 1) {
@@ -28,6 +40,7 @@ function handleClickButton() {
   } else {
     const spanElement = document.createElement('span');
     spanElement.innerText = 'Por favor, digite o conteúdo da carta.';
+    pElement.appendChild(spanElement);
   }
 }
 

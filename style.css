@@ -81,3 +81,11 @@ header {
 .word {
   padding-right: 10px;
 }
+
+.newspaper {
+  background-color: antiquewhite;
+  color: white;
+  font-family: Times New Roman, Times, serif;
+  font-weight: 900;
+  text-transform: uppercase;
+}

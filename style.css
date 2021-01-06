@@ -1,0 +1,153 @@
+body {
+  background-color: rgb(253, 252, 220);
+  box-sizing: border-box;
+  color: rgb(240, 113, 103);
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1366px;
+}
+
+header {
+  align-items: center;
+  background-color: rgb(0, 129, 167);
+  color: rgb(254, 217, 183);
+  display: flex;
+  font-family: Lobster, cursive;
+  justify-content: center;
+}
+
+.form {
+  border-radius: 4px;
+  box-shadow: 0 10px 25px gray;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  padding: 30px 20px;
+  width: 700px;
+}
+
+.form-div {
+  display: flex;
+}
+  
+.form-input {
+  background-color: rgb(253, 252, 220);;
+  height: 48px;
+  color: rgb(115, 115, 115);
+  font-size: 16px;
+  border: 1px solid gray;
+  border-radius: 4px;
+  outline: none;
+  margin-right: 5px;
+  width: 575px;
+}
+
+.form-label {
+  padding-bottom: 5px;
+  background-color: rgb(253, 252, 220);
+  font-size: 14px;
+}
+
+.form-button {
+  display: block;
+  outline: none;
+  border: none;
+  color: rgb(253, 252, 220);
+  font-weight: bold;
+  height: 50px;
+  background-color: rgb(0, 175, 185);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: .3s;
+  width: 120px;
+}
+
+.form-button:hover {
+  background-color: rgba(0, 175, 185, 0.8);
+}
+
+.letter-container {
+  margin-top: 40px;
+  color: rgb(38, 38, 38);
+  font-size: 16px;
+}
+
+.warning {
+  background-color: red;
+  color: antiquewhite;
+  font-size: 30px;
+  padding: 20px;
+}
+
+.newspaper {
+  background-color: antiquewhite;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+}
+
+.magazine1 {
+  background-color: teal;
+  color: white;
+  font-family: Verdana, Geneva, sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.magazine2 {
+  background-image: url(images/pink-pattern.png);
+  color: fuchsia;
+  font-family: Verdana, Geneva, sans-serif;
+  font-weight: 900;
+}
+
+.medium {
+  font-size: 20px;
+  padding: 8px;
+}
+
+.big {
+  font-size: 30px;
+  padding: 10px;
+}
+
+.reallybig {
+  font-size: 40px;
+  padding: 15px;
+}
+
+.rotateleft {
+  transform: rotate(-5deg);
+}
+
+.rotateright {
+  transform: rotate(5deg);
+}
+
+.skewleft {
+  transform: skewX(10deg);
+}
+
+.skewright {
+  transform: skewX(-10deg);
+}
+
+.count-container {
+  color: rgb(38, 38, 38);
+  display: flex;
+  font-size: 20px;
+  margin-top: 80px;
+  text-align: center;
+  font-family: 'Fira Code', monospace;
+}
+
+.count-container p {
+  margin: 0 10px;
+}

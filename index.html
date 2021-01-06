@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Lobster&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Mistery Letter</title>
+</head>
+<body>
+  <header>
+    <h1>Carta Misteriosa</h1>
+  </header>
+  <div class="container">
+    <div class="form">
+      <label for="carta-texto" class="form-label">Escreva o texto</label>
+      <div class="form-div">
+        <input type="text" id="carta-texto" class="form-input">
+        <button id="criar-carta" class="form-button">Gerar Carta</button>
+      </div>
+    </div>
+    <div class="letter-container">
+      <p id="carta-gerada"></p>
+    </div>
+    <div class="count-container">
+      <label>Quantidade de palavras: </label>
+      <p id="carta-contador">0</p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

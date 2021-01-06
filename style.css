@@ -137,3 +137,15 @@ header {
 .skewright {
   transform: skewX(-10deg);
 }
+
+.count-container {
+  color: rgb(38, 38, 38);
+  display: flex;
+  font-size: 20px;
+  margin-top: 80px;
+  text-align: center;
+}
+
+.count-container p {
+  margin: 0 10px;
+}

@@ -52,6 +52,12 @@ const ramdomClasses = function () {
   return chosenClasses;
 };
 
+const wordCounter = function () {
+  const totalWords = document.querySelectorAll('span');
+  const countElement = document.getElementById('carta-contador');
+  countElement.innerText = totalWords.length;
+}
+
 function handleClickButton() {
   const inputText = document.getElementById('carta-texto').value;
   const pElement = document.getElementById('carta-gerada');
@@ -72,6 +78,7 @@ function handleClickButton() {
     spanElement.className = 'warning';
     pElement.appendChild(spanElement);
   }
+  wordCounter();
 }
 
 const createLetter = function () {

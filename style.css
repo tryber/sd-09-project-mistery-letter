@@ -1,36 +1,37 @@
 body {
   background-color: rgb(253, 252, 220);
+  box-sizing: border-box;
   color: rgb(240, 113, 103);
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
 }
 
 .container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin: 0 auto;
   max-width: 1366px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
 }
 
 header {
+  align-items: center;
   background-color: rgb(0, 129, 167);
   color: rgb(254, 217, 183);
   display: flex;
-  align-items: center;
+  font-family: Lobster, cursive;
   justify-content: center;
 }
 
 .form {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  width: 700px;
-  padding: 30px 20px;
   border-radius: 4px;
   box-shadow: 0 10px 25px gray;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  padding: 30px 20px;
+  width: 700px;
 }
 
 .form-div {
@@ -39,7 +40,6 @@ header {
   
 .form-input {
   background-color: rgb(253, 252, 220);;
-  width: 575px;
   height: 48px;
   color: rgb(115, 115, 115);
   font-size: 16px;
@@ -47,6 +47,7 @@ header {
   border-radius: 4px;
   outline: none;
   margin-right: 5px;
+  width: 575px;
 }
 
 .form-label {
@@ -144,6 +145,7 @@ header {
   font-size: 20px;
   margin-top: 80px;
   text-align: center;
+  font-family: 'Fira Code', monospace;
 }
 
 .count-container p {

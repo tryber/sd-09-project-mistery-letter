@@ -25,7 +25,7 @@ function randomClasses(element) {
 function includeQdtWords(length) {
   if (!document.getElementById('carta-contador')) {
     const pCartaGerada = document.getElementById('carta-gerada');
-    pCartaGerada.insertAdjacentHTML('afterend', `<p id="carta-contador">${length}</p>`);
+    pCartaGerada.insertAdjacentHTML('afterend', `<p class="bold-text">Quantidade de Palavras: <span id="carta-contador">${length}</span></p>`);
   } else {
     document.getElementById('carta-contador').innerText = length;
   }

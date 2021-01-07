@@ -1,3 +1,79 @@
+body {
+  align-content: center;
+  align-items: center;
+  background: url('https://images.wallpaperscraft.com/image/mountains_morning_fog_sunrise_sky_mystery_48123_1920x1200.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  justify-content: center;
+  margin: 0;
+}
+
+/* Topo */
+h1 {
+  color: rgb(155 , 80 , 103);
+  font-family: Alex Brush, cursive;
+  font-size: 5em;
+  font-weight: 400;
+  padding: 0;
+  text-shadow: 2px 2px 0 rgb(24 , 19 , 26),
+    -1px -1px 0 rgb(24 , 19 , 26),
+    1px -1px 0 rgb(24 , 19 , 26),
+    -1px 1px 0 rgb(24 , 19 , 26),
+    1px 1px 0 rgb(24 , 19 , 26);
+}
+
+/* Form */
+.form {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 0;
+  width: 50vw;
+}
+
+.form p {
+  flex: 1 0 100%;
+  text-align: center;
+}
+
+.form input {
+  background-color: rgba(210 , 191 , 187 , 0.75);
+  border: 2px solid rgb(62 , 32 , 41);
+  border-bottom-left-radius: 8px;
+  border-right: none;
+  border-top-left-radius: 8px;
+  box-sizing: border-box;
+  color: rgb(75 , 71 , 72);
+  flex: 1 0 75%;
+  padding: 8px;
+}
+
+.form button {
+  background-color: rgb(62 , 32 , 41);
+  border: 2px solid rgb(62 , 32 , 41);
+  border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
+  box-sizing: border-box;
+  color: rgb(205 , 168 , 179);
+  flex: 1 0 25%;
+  font-weight: 700;
+}
+
+.form button:hover {
+  background-color: rgb(205 , 168 , 179);
+  color: rgb(62 , 32 , 41);
+}
+
+/* Frase */
+.carta-gerada {
+  line-height: 2;
+  max-width: 90vw;
+  word-wrap: break-word;
+}
+
 span {
   margin-right: 8px;
 }
@@ -60,4 +136,28 @@ span:last-of-type {
 
 .skewright {
   transform: skewX(-10deg);
+}
+
+/* Quantidade */
+.bold-text {
+  font-weight: 700;
+  margin-bottom: 4em;
+  text-align: center;
+}
+
+.bold-text span {
+  font-weight: 400;
+}
+
+/* Rodapé */
+footer {
+  background: rgba(255 , 255 , 255 , 0.25);
+  border-top: 1px solid rgb(205 , 168 , 179);
+  bottom: 0;
+  font-size: 14px;
+  margin: 0;
+  padding: 8;
+  position: fixed;
+  text-align: center;
+  width: 100%;
 }

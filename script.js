@@ -15,10 +15,6 @@ function randomClasses(element) {
   element.classList.add(grupoTamanho[randomValue(grupoTamanho.length)]);
   element.classList.add(grupoRotacao[randomValue(grupoRotacao.length)]);
   element.classList.add(grupoInclinacao[randomValue(grupoInclinacao.length)]);
-
-  if (element.classList.contains('newspaper')) {
-    element.style.fontFamily = '"Times New Roman", serif';
-  }
 }
 
 // Adiciona ao HTML Quantidade de Letras

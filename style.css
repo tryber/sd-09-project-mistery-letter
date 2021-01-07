@@ -139,14 +139,19 @@ span:last-of-type {
 }
 
 /* Quantidade */
-.bold-text {
+.carta-qtd {
   font-weight: 700;
   margin-bottom: 4em;
   text-align: center;
 }
 
-.bold-text span {
+.carta-qtd p {
+  display: inline-block;
+}
+
+.carta-qtd p:last-of-type {
   font-weight: 400;
+  margin-left: 8px;
 }
 
 /* Rodapé */

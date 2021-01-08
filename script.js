@@ -4,7 +4,15 @@
 // para escolher a classe dentro do grupo um número aleatório que vai até o número de classes existentes
 
 function buildSpanClasses(span) {
-  
+  const classAmount = Math.round(Math.random() * (4 - 2) + 2);
+  const toBeNamed = {
+    classGroups: ['estilo','tamanho','rotação','transformação'],
+    estilo: ['newspaper','magazine1','magazine2'],
+    tamanho: ['medium','big','reallybig'],
+    rotation: ['rotateleft','rotateright'],
+    skew: ['skewleft','skewright']
+  };
+  // span.classList.add()
 }
 
 function buildMisteryLetter(texto) {

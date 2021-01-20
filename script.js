@@ -5,14 +5,20 @@
 
 function buildSpanClasses(span) {
   const classAmount = Math.round(Math.random() * (4 - 2) + 2);
-  const toBeNamed = {
-    classGroups: ['estilo','tamanho','rotação','transformação'],
+  const classObject = {
     estilo: ['newspaper','magazine1','magazine2'],
     tamanho: ['medium','big','reallybig'],
     rotation: ['rotateleft','rotateright'],
-    skew: ['skewleft','skewright']
+    skew: ['skewleft','skewright'],
   };
-  // span.classList.add()
+  for (let index = 0; index < classAmount; index += 1) {
+    // numero aleatório para escolher o índice de classGroup
+    // splice para remover o índice escolhido de classGroup
+    // span.classList.add()
+    let randomIndex = Math.round(Math.random() * (Object.keys(classObject).length - 1));
+    let randomStyle = Math.round(Math.random() * (Object.values(classObject)[`${randomIndex}`].length - 1));
+    span.classList.add(`${Object.values(classObject)[randomIndex][randomStyle]}`);
+  }
 }
 
 function buildMisteryLetter(texto) {

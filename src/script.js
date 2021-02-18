@@ -72,10 +72,27 @@ function styleEachSpan() {
   });
 }
 
+function countWords() {
+  const cartaTextoInput = document.querySelector('#carta-texto')
+  const cartaContadorParagraph = document.querySelector('#carta-contador')
+
+  cartaContadorParagraph.innerText = cartaTextoInput.value.split(' ').length
+}
+
+function verifyWords() {
+  const cartaTextoInput = document.querySelector('#carta-texto')
+  const cartaGerada = document.querySelector('#carta-gerada')
+
+  if (!cartaTextoInput.value || cartaTextoInput.value == false) {
+    cartaGerada.innerText = 'Por favor, digite o conteúdo da carta.'
+  }
+}
+
 function criarCartaButtonTasks() {
   clearTheCartaTextoParagraph();
   putWordsInSpans();
   styleEachSpan();
+  verifyWords();
 }
 
 function listenToCriarCartaButton() {
@@ -93,7 +110,17 @@ function listenToCartaTextoInput() {
     if (event.key === 'Enter') {
       criarCartaButtonTasks();
     }
+
+    countWords()
   });
+
+  cartaTextoInput.addEventListener('keyup', () => {
+    if (!cartaTextoInput.value) {
+      const cartaContador = document.querySelector('#carta-contador')
+
+      cartaContador.innerText = '0'
+    }
+  })
 }
 
 window.onload = () => {

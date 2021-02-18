@@ -47,7 +47,7 @@ function splitTheLetter() {
 function putWordsInSpans() {
   const cartaGeradaParagraph = document.querySelector('#carta-gerada');
 
-  splitTheLetter().map((word) => {
+  splitTheLetter().forEach((word) => {
     const span = document.createElement('span');
 
     span.innerText = `${word} `;
@@ -73,18 +73,20 @@ function styleEachSpan() {
 }
 
 function countWords() {
-  const cartaTextoInput = document.querySelector('#carta-texto')
-  const cartaContadorParagraph = document.querySelector('#carta-contador')
+  const cartaTextoInput = document.querySelector('#carta-texto');
+  const cartaContadorParagraph = document.querySelector('#carta-contador');
 
-  cartaContadorParagraph.innerText = cartaTextoInput.value.split(' ').length
+  if (cartaTextoInput.value && cartaTextoInput.value != false) { 
+    cartaContadorParagraph.innerText = cartaTextoInput.value.split(' ').length;
+  }
 }
 
 function verifyWords() {
-  const cartaTextoInput = document.querySelector('#carta-texto')
-  const cartaGerada = document.querySelector('#carta-gerada')
+  const cartaTextoInput = document.querySelector('#carta-texto');
+  const cartaGerada = document.querySelector('#carta-gerada');
 
   if (!cartaTextoInput.value || cartaTextoInput.value == false) {
-    cartaGerada.innerText = 'Por favor, digite o conteúdo da carta.'
+    cartaGerada.innerText = 'Por favor, digite o conteúdo da carta.';
   }
 }
 

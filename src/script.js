@@ -76,7 +76,7 @@ function countWords() {
   const cartaTextoInput = document.querySelector('#carta-texto');
   const cartaContadorParagraph = document.querySelector('#carta-contador');
 
-  if (cartaTextoInput.value && cartaTextoInput.value != false) { 
+  if (cartaTextoInput.value && cartaTextoInput.value != false) {
     cartaContadorParagraph.innerText = cartaTextoInput.value.split(' ').length;
   }
 }
@@ -113,16 +113,16 @@ function listenToCartaTextoInput() {
       criarCartaButtonTasks();
     }
 
-    countWords()
+    countWords();
   });
 
   cartaTextoInput.addEventListener('keyup', () => {
     if (!cartaTextoInput.value) {
-      const cartaContador = document.querySelector('#carta-contador')
+      const cartaContador = document.querySelector('#carta-contador');
 
-      cartaContador.innerText = '0'
+      cartaContador.innerText = '0';
     }
-  })
+  });
 }
 
 window.onload = () => {

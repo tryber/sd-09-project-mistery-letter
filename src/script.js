@@ -125,7 +125,23 @@ function listenToCartaTextoInput() {
   });
 }
 
+function listenToCartaGerada() {
+  const cartaGerada = document.querySelector('#carta-gerada')
+
+  cartaGerada.addEventListener('click', (event) => {
+    if (event.target.id !== 'carta-gerada') {
+      event.target.className = ''
+
+      event.target.classList.add(randomClass('size'))
+      event.target.classList.add(randomClass('style'))
+      event.target.classList.add(randomClass('rotation'))
+      event.target.classList.add(randomClass('inclination'))
+    }
+  })
+}
+
 window.onload = () => {
   listenToCriarCartaButton();
   listenToCartaTextoInput();
+  listenToCartaGerada();
 };
